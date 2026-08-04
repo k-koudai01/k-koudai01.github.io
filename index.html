@@ -1,17 +1,128 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>石森虹大_ポートフォリオ</title>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石森虹大 ポートフォリオ</title>
+<style> 
+    body
+    {
+       margin: 0;
+       padding: 0;
+       font-family: sans-serif;
+       display: flex;
+       color: #333;
+    }
+/* 左側の青いサイドバー */
+        .sidebar {
+            width: 250px;
+            background-color: #2b5566; /* 先輩風のダークブルー */
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+        }
+
+        .sidebar h1 {
+            font-size: 20px;
+            text-align: center;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .sidebar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            color: #88c0d0;
+        }
+
+        /* 右側のメイン表示エリア */
+        .content {
+            margin-left: 250px; /* サイドバーの横幅分空ける */
+            padding: 40px;
+            width: 100%;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* 学歴・職歴などの表っぽく見せるテーブル設定 */
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        td {
+            padding: 8px 15px;
+            vertical-align: top;
+        }
+    </style>
 </head>
 <body>
-    <h1>プロフィール</h1>
-    <p>現在作成中です！後日アップデートします。</p>
-    <h2>使用言語・ツール</h2>
-    <ul>
-        <li>開発言語:C++</li>
-      　<li>開発環境:Visual Studio</li>
-        <li>ゲームエンジン：Unreal Engine5</li>
-    </ul>
+
+    <!-- 左側のナビゲーションメニュー -->
+    <div class="sidebar">
+        <h1>石森虹大<br>ポートフォリオ</h1>
+        <ul>
+            <li><a href="#home">ホーム</a></li>
+            <li><a href="#works">作品紹介</a></li>
+            <li><a href="#history">学歴・経歴</a></li>
+        </ul>
+    </div>
+
+    <!-- 右側のメインコンテンツ -->
+    <div class="content">
+
+        <h1 id="home">自己紹介</h1>
+        <p>19歳 ゲームプログラマーの石森虹大です。<br>C++およびUnreal Engine 5を中心にゲーム制作を行っています。</p>
+
+        <h2>基本情報</h2>
+        <table>
+            <tr>
+                <td><strong>氏名</strong></td>
+                <td>：石森 虹大（いしもり こうだい）</td>
+            </tr>
+            <tr>
+                <td><strong>主な使用技術</strong></td>
+                <td>：C++ / Unreal Engine 5 / Visual Studio</td>
+            </tr>
+        </table>
+
+        <h2 id="history">学歴・経歴</h2>
+        <table>
+            <tr>
+                <td>2024年 4月</td>
+                <td>◯◯学校 入学</td>
+            </tr>
+            <tr>
+                <td>2026年 4月</td>
+                <td>◯◯学科 在籍中</td>
+            </tr>
+        </table>
+
+        <h2 id="works">制作作品</h2>
+        <p>※ここに作ったゲームの画像や説明文を入れていきます！</p>
+
+    </div>
+
 </body>
 </html>
