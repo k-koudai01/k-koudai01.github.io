@@ -1,128 +1,220 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>石森虹大 ポートフォリオ</title>
-<style> 
-    body
-    {
-       margin: 0;
-       padding: 0;
-       font-family: sans-serif;
-       display: flex;
-       color: #333;
-    }
-/* 左側の青いサイドバー */
-        .sidebar {
-            width: 250px;
-            background-color: #2b5566; /* 先輩風のダークブルー */
-            color: #ffffff;
-            min-height: 100vh;
-            padding: 20px;
-            box-sizing: border-box;
-            position: fixed;
-        }
-
-        .sidebar h1 {
-            font-size: 20px;
+    <title>石森虹大 - ポートフォリオ</title>
+    <style>
+       /* 基本スタイル */
+        body
+       {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            color: #333;
+            background-color: #f9f9f9;
+       }
+       
+       /* 基本スタイル */
+       .sidebar
+       {
+           width: 260px;
+           background-color: #1a252f;
+           color: #ffffff;
+           min-height: 100vh;
+           paddding: 30px 20px;
+           box-sizing: border-box;
+           position: fixed;
+       }
+       /sidebar h1
+       {
+            font-size: 22px;
+            margin-bottom: 5px;
             text-align: center;
-            border-bottom: 2px solid #fff;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
+       }
 
-        .sidebar ul {
+       .sidebar .subtitle
+       {
+            font-size: 13px;
+            color: #00d1b2; /* アクセントカラー（エメラルド） */
+            text-align: center;
+            margin-bottom: 30px;
+       }
+
+       .sidebar ul 
+       {
             list-style: none;
             padding: 0;
-        }
+       }
 
-        .sidebar li {
+       .sidebar li 
+       {
             margin-bottom: 15px;
-            text-align: center;
-        }
+       }
 
-        .sidebar a {
-            color: #ffffff;
+       .sidebar a 
+       {
+            color: #ecf0f1;
             text-decoration: none;
             font-weight: bold;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: 0.2s;
         }
 
-        .sidebar a:hover {
-            color: #88c0d0;
+        .sidebar a:hover 
+        {
+            background-color: #2c3e50;
+            color: #00d1b2;
         }
 
-        /* 右側のメイン表示エリア */
-        .content {
-            margin-left: 250px; /* サイドバーの横幅分空ける */
+        /* 右側：メインエリア */
+        .content 
+        {
+            margin-left: 260px;
             padding: 40px;
+            max-width: 900px;
             width: 100%;
         }
 
-        h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-            margin-top: 30px;
+        section 
+        {
+            background: #ffffff;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* 学歴・職歴などの表っぽく見せるテーブル設定 */
-        table {
-            border-collapse: collapse;
+        h2 
+        {
+            font-size: 20px;
+            color: #1a252f;
+            border-bottom: 3px solid #00d1b2;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        /* 作品カード風デザイン */
+        .work-card
+        {
+            border: 1px solid #e1e8ed;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fafafa;
+        }
+
+        .work-title
+        {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .tech-tag
+        {
+            display: inline-block;
+            background: #eef9f6;
+            color: #009688;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .btn 
+       　{
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: #1a252f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 13px;
+            margin-right: 10px;
             margin-top: 10px;
         }
 
-        td {
-            padding: 8px 15px;
-            vertical-align: top;
+        .btn:hover 
+      　{
+            background-color: #00d1b2;
         }
     </style>
 </head>
 <body>
-
-    <!-- 左側のナビゲーションメニュー -->
+   
+   <!-- サイドバー -->
     <div class="sidebar">
-        <h1>石森虹大<br>ポートフォリオ</h1>
+        <h1>石森 虹大</h1>
+        <div class="subtitle">Game Programmer</div>
         <ul>
-            <li><a href="#home">ホーム</a></li>
-            <li><a href="#works">作品紹介</a></li>
-            <li><a href="#history">学歴・経歴</a></li>
+            <li><a href="#about">About（自己紹介）</a></li>
+            <li><a href="#skills">Skills（スキル）</a></li>
+            <li><a href="#works">Works（制作作品）</a></li>
+            <li><a href="#history">History（経歴）</a></li>
         </ul>
     </div>
 
-    <!-- 右側のメインコンテンツ -->
+    <!-- メインコンテンツ -->
     <div class="content">
 
-        <h1 id="home">自己紹介</h1>
-        <p>19歳 ゲームプログラマーの石森虹大です。<br>C++およびUnreal Engine 5を中心にゲーム制作を行っています。</p>
+        <!-- 自己紹介 -->
+        <section id="about">
+            <h2>About（自己紹介）</h2>
+            <p>はじめまして。19歳のゲームプログラマー、石森虹大（いしもり こうだい）です。</p>
+            <p>C++やUnreal Engine 5を用いたゲーム開発を中心に学んでおり、処理の最適化や内部ロジックの実装に強い興味を持っています。</p>
+        </section>
 
-        <h2>基本情報</h2>
-        <table>
-            <tr>
-                <td><strong>氏名</strong></td>
-                <td>：石森 虹大（いしもり こうだい）</td>
-            </tr>
-            <tr>
-                <td><strong>主な使用技術</strong></td>
-                <td>：C++ / Unreal Engine 5 / Visual Studio</td>
-            </tr>
-        </table>
+        <!-- スキル -->
+        <section id="skills">
+            <h2>Skills（スキル）</h2>
+            <ul>
+                <li><strong>言語：</strong> C++</li>
+                <li><strong>ゲームエンジン：</strong> Unreal Engine 5</li>
+                <li><strong>開発環境・ツール：</strong> Visual Studio / Git / GitHub</li>
+            </ul>
+        </section>
 
-        <h2 id="history">学歴・経歴</h2>
-        <table>
-            <tr>
-                <td>2024年 4月</td>
-                <td>◯◯学校 入学</td>
-            </tr>
-            <tr>
-                <td>2026年 4月</td>
-                <td>◯◯学科 在籍中</td>
-            </tr>
-        </table>
+        <!-- 作品紹介 -->
+        <section id="works">
+            <h2>Works（制作作品）</h2>
+            
+            <!-- 作品1 -->
+            <div class="work-card">
+                <div class="work-title">【作品名が入ります】</div>
+                <div style="margin: 8px 0;">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">Unreal Engine 5</span>
+                </div>
+                <p><strong>概要：</strong> ここにどんなゲームかの概要を書きます。（例：3Dアクションゲーム）</p>
+                <p><strong>担当・特徴：</strong> 
+                    <ul>
+                        <li>C++を用いた物理挙動・移動処理の実装</li>
+                        <li>処理負荷を下げるためのコード最適化</li>
+                    </ul>
+                </p>
+                <a href="https://github.com/あなたのリポジトリ" class="btn" target="_blank">GitHubを見る</a>
+                <a href="YouTubeなどの動画URL" class="btn" target="_blank">動画を見る</a>
+            </div>
+        </section>
 
-        <h2 id="works">制作作品</h2>
-        <p>※ここに作ったゲームの画像や説明文を入れていきます！</p>
+        <!-- 経歴 -->
+        <section id="history">
+            <h2>History（経歴）</h2>
+            <p>ここに学校名や入学・卒業予定年などを記載します。</p>
+        </section>
 
     </div>
 
 </body>
 </html>
+
+
+
+
+
+   
