@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あぶないっ！ゴエポン！～お宝奪還伝～ - 詳細</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #1a252f;
+            border-bottom: 3px solid #00d1b2;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-top: 30px;
+            border-left: 4px solid #00d1b2;
+            padding-left: 10px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: #eef9f6;
+            color: #009688;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #1a252f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-right: 15px;
+            margin-top: 10px;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #00d1b2;
+        }
+
+        .back-btn {
+            background-color: #7f8c8d;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 戻るボタン -->
+        <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
+
+        <h1>あぶないっ！ゴエポン！～お宝奪還伝～</h1>
+
+        <img src="game1.png" alt="作品画像" style="width: 100%; max-width: 600px; height: auto; border-radius: 6px; margin: 15px 0;">
+
+        <div>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Visual Studio</span>
+            <span class="tech-tag">チーム開発</span>
+        </div>
+
+        <h2>作品リンク</h2>
+        <p>
+            <a href="https://github.com/あなたのリポジトリ" class="btn" target="_blank">GitHubソースコードを見る</a>
+            <a href="https://drive.google.com/file/d/1Yvv3DKql_moazpz6s2mlfUI8taVbmzsO/view?usp=drive_link" class="btn" target="_blank">実演動画を見る（Google Drive）</a>
+        </p>
+
+        <h2>概要</h2>
+        <p>3D変身ステルスアクションゲーム</p>
+
+        <h2>詳細な担当箇所</h2>
+        <ul>
+            <li><strong>ゲーム演出全般：</strong> 画面遷移時の「ふすま開閉」演出や、ゲーム内のメイン演出プログラムを担当</li>
+            <li><strong>UI・画面表示：</strong> タイトルロゴの表示や、メインゲーム中におけるHUDの実装および表示制御</li>
+            <li><strong>ゲームループ：</strong> タイトルからゲームオーバー/クリア判定に至る一連の流れを実装</li>
+            <li><strong>ギミック：</strong> 宝箱や巻物などの取得処理、変身時の状態遷移などを実装</li>
+            <li><strong>カメラ・制御：</strong> 演出に合わせたカメラワークの制御と、演出中のプレイヤー操作制限処理を実装</li>
+        </ul>
+
+        <h2>こだわった点・技術的な工夫</h2>
+        <p>ここに演出処理の実装で工夫した点や、プログラム上で工夫したこと（C++での設計など）を自由に書いてみましょう！</p>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
+        </div>
+    </div>
+
+</body>
+</html>
