@@ -30,7 +30,8 @@
             margin-top: 0;
         }
 
-        h2 {
+        h2
+        {
             font-size: 18px;
             color: #2c3e50;
             margin-top: 30px;
@@ -97,14 +98,16 @@
             <a href="https://drive.google.com/file/d/1IQKEBDAPsy4939oy8BlkQpQqS7lspllu/view?usp=sharing" class="btn" target="_blank">実演動画を見る</a>
         </p>
         
-        <h2>詳細な担当箇所</h2>
-        <ul>
-            <li><strong>ゲーム演出全般：</strong> 画面遷移時の「ふすま開閉」演出や、ゲーム内のメイン演出プログラムを担当</li>
-            <li><strong>UI・画面表示：</strong> タイトルロゴの表示や、メインゲーム中におけるHUDの実装および表示制御</li>
-            <li><strong>ゲームループ：</strong> タイトルからゲームオーバー/クリア判定に至る一連の流れを実装</li>
-            <li><strong>ギミック：</strong> 宝箱や巻物などの取得処理、変身時の状態遷移などを実装</li>
-            <li><strong>カメラ・制御：</strong> 演出に合わせたカメラワークの制御と、演出中のプレイヤー操作制限処理を実装</li>
-        </ul>
+        <h2>アピール箇所</h2>
+      <h2>提案し実装した箇所</h2>
+        <div class="detail-block">
+            <h3>1.タイトル画面</h3>
+            <p><strong>提案内容：</strong>仕様段階では静止画の予定でしたが、プレイヤーの期待感を高めるため、主人公「ゴエポン」の3Dモデルや動きのあるタイトルロゴを取り入れたタイトル画面を提案・実装しました。</p>
+            <p><strong>こだわった箇所：</strong>タイトルロゴの落下演出では、重力加速度と反発係数を用いたバウンド処理を実装しました。着地時に自然な跳ね返りを加えることで、ゲームのポップな世界観を表現しています。
+            <div class="media-box">
+        <img src="images/title_bound.gif" alt="タイトルロゴのバウンド演出">
+    </div>
+</div>
         
         <div style="margin-top: 40px;">
             <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
