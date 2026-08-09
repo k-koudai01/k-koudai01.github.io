@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>あぶないっ！ゴエポン！～お宝奪還伝～ - 詳細</title>
     <style>
-        body {
+        body 
+        {
             margin: 0;
             padding: 40px 20px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,7 +14,8 @@
             background-color: #f9f9f9;
         }
 
-        .container {
+        .container
+        {
             max-width: 800px;
             margin: 0 auto;
             background: #ffffff;
@@ -22,7 +24,8 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        h1 {
+        h1 
+        {
             font-size: 24px;
             color: #1a252f;
             border-bottom: 3px solid #00d1b2;
@@ -39,7 +42,8 @@
             padding-left: 10px;
         }
 
-        .tech-tag {
+        .tech-tag 
+        {
             display: inline-block;
             background: #eef9f6;
             color: #009688;
@@ -50,7 +54,8 @@
             margin-right: 5px;
         }
 
-        .btn {
+        .btn
+        {
             display: inline-block;
             padding: 8px 16px;
             background-color: #1a252f;
@@ -63,17 +68,37 @@
             transition: 0.2s;
         }
 
-        .btn:hover {
+        .btn:hover
+        {
             background-color: #00d1b2;
         }
 
-        .back-btn {
+        .back-btn
+        {
             background-color: #7f8c8d;
         }
 
-        ul {
+        ul 
+        {
             line-height: 1.8;
         }
+
+        .appeal-gif 
+        {
+            max-width: 600px;        /* 幅の最大値を600pxに制限（お好みの大きさに変更可能） */
+            width: 100%;             /* 画面が狭い時は自動で縮小 */
+            height: auto;            /* 縦横比を維持 */
+            display: block;          /* 中央揃え用 */
+            margin: 20px auto;       /* 上下に20pxの余白を作り、左右中央に配置 */
+            border-radius: 8px;      /* 角を少し丸くして見た目を綺麗に */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* うっすら影をつけて浮き上がらせる */
+        }
+
+        .appeal-section
+        {
+            margin-top: 50px;        /* 作品リンクとの間に50pxのスペースを作る */
+        }
+        
     </style>
 </head>
 <body>
@@ -92,11 +117,13 @@
             <span class="tech-tag">チーム開発</span>
         </div>
 
-        <h2>作品リンク</h2>
+<section class="appeal-section">
+    <h2>作品リンク</h2>
         <p>
             <a href="https://github.com/uh41/Goepon" class="btn" target="_blank">GitHubソースコードを見る</a>
             <a href="https://drive.google.com/file/d/1IQKEBDAPsy4939oy8BlkQpQqS7lspllu/view?usp=sharing" class="btn" target="_blank">実演動画を見る</a>
         </p>
+  </section>
         
         <h1>アピール箇所</h1>
         <div class="detail-block">
@@ -104,7 +131,7 @@
             <p><strong>提案内容：</strong>仕様段階では静止画の予定でしたが、プレイヤーの期待感を高めるため、主人公「ゴエポン」の3Dモデルや動きのあるタイトルロゴを取り入れたタイトル画面を提案・実装しました。</p>
             <p><strong>こだわった箇所：</strong>タイトルロゴの落下演出では、重力加速度と反発係数を用いたバウンド処理を実装しました。着地時に自然な跳ね返りを加えることで、ゲームのポップな世界観を表現しています。
             <div class="media-box">
-       <img src="Title_Bound.gif" alt="タイトルロゴのバウンド演出">
+       <img src="Title_Bound.gif" alt="タイトルロゴのバウンド演出" class="appeal-gif">
     </div>
 </div>
         
