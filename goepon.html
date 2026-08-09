@@ -24,22 +24,52 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        h1 
+        .main-title 
         {
             font-size: 24px;
             color: #1a252f;
             border-bottom: 3px solid #00d1b2;
             padding-bottom: 8px;
-            margin-top: 0;
+            margin-top: 15px;
         }
 
-        h2
+        .appeal-main-title 
         {
-            font-size: 18px;
+            font-size: 28px;
+            color: #1a252f;
+            border-bottom: 3px solid #00d1b2;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 25px;
+        }
+        
+      h2
+        {
+            font-size: 20px;
             color: #2c3e50;
-            margin-top: 30px;
+            margin-top: 35px;
+            margin-bottom: 15px;
             border-left: 4px solid #00d1b2;
             padding-left: 10px;
+        }
+
+        /* 3. 内容の見出し（1. タイトル画面のバウンド演出 など） */
+        h3 
+        {
+            font-size: 16px;
+            color: #333333;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* 4. 内容の中身（本文） */
+        p 
+        {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #444444;
+            margin-bottom: 10px;
         }
 
         .tech-tag 
@@ -107,8 +137,8 @@
         <!-- 戻るボタン -->
         <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
 
-        <h1>あぶないっ！ゴエポン！～お宝奪還伝～</h1>
-
+        <h1 class="main-title">あぶないっ！ゴエポン！～お宝奪還伝～</h1>
+        
         <img src="game1.png" alt="作品画像" style="width: 100%; max-width: 600px; height: auto; border-radius: 6px; margin: 15px 0;">
 
         <div>
@@ -117,46 +147,42 @@
             <span class="tech-tag">チーム開発</span>
         </div>
 
-<section>
-    <h2>作品リンク</h2>
-    <div class="link-buttons">
-            <a href="https://github.com/uh41/Goepon" class="btn" target="_blank">GitHubソースコードを見る</a>
-            <a href="https://drive.google.com/file/d/1IQKEBDAPsy4939oy8BlkQpQqS7lspllu/view?usp=sharing" class="btn" target="_blank">実演動画を見る</a>
-    </div>
-</section> 
+<!-- 作品リンク -->
+        <section>
+            <h2>作品リンク</h2>
+            <div class="link-buttons">
+                <a href="https://github.com/uh41/Goepon" class="btn" target="_blank">GitHubソースコードを見る</a>
+                <a href="https://drive.google.com/file/d/1IQKEBDAPsy4939oy8BlkQpQqS7lspllu/view?usp=sharing" class="btn" target="_blank">実演動画を見る</a>
+            </div>
+        </section>
 
-<section class="appeal-section">
-        <h1>アピール箇所</h1>
-        <!-- 【分岐1】企画・提案・演出のアピール -->
-<section class="appeal-section">
-    <h2>提案・実装した箇所</h2>
+<!-- アピール箇所全体 -->
+        <section>
+            <h1 class="appeal-main-title">アピール箇所</h1>
 
-    <div class="appeal-card">
-        <h3>1. タイトル画面のバウンド演出</h3>
-        <p><strong>提案内容：</strong>仕様段階では静止画の予定でしたが、プレイヤーの期待感を高めるため、主人公「ゴエポン」の3Dモデルや動きのあるタイトルロゴを取り入れたタイトル画面を提案・実装しました。</p>
-        <p><strong>こだわった箇所：</strong>タイトルロゴの落下演出では、重力加速度と反発係数を用いたバウンド処理を実装しました。着地時に自然な跳ね返りを加えることで、ポップな世界観を表現しています。</p>
-        <img src="Title_Bound.gif" alt="タイトルロゴのバウンド演出" class="appeal-gif">
-    </div>
-</section>
+            <!-- 【分岐1】提案・実装 -->
+            <div class="appeal-card">
+                <h2>提案・実装した箇所</h2>
 
+                <h3>1. タイトル画面のバウンド演出</h3>
+                <p><strong>提案内容：</strong>仕様段階では静止画の予定でしたが、プレイヤーの期待感を高めるため、主人公「ゴエポン」の3Dモデルや動きのあるタイトルロゴを取り入れたタイトル画面を提案・実装しました。</p>
+                <p><strong>こだわった箇所：</strong>タイトルロゴの落下演出では、重力加速度と反発係数を用いたバウンド処理を実装しました。着地時に自然な跳ね返りを加えることで、ポップな世界観を表現しています。</p>
+                <img src="Title_Bound.gif" alt="タイトルロゴのバウンド演出" class="appeal-gif">
+            </div>
 
-<!-- 【分岐2】技術向上・コード設計のアピール -->
-<section class="appeal-section">
-    <h2>技術的挑戦した箇所</h2>
+            <!-- 【分岐2】技術的挑戦 -->
+            <div class="appeal-card">
+                <h2>技術的挑戦した箇所</h2>
 
-    <div class="appeal-card">
-        <h3>1. レベルデザインを活用したマネージャークラスの設計</h3>
-        <p><strong>取り組んだ背景・目的：</strong>自身のプログラミング技術向上のため、〇〇な課題を解決するコード設計に挑戦しました。</p>
-        <p><strong>実装と工夫：</strong>レベルデザインのデータをスムーズに管理・制御できるよう、マネージャークラスを自作して運用しました。</p>
-        <!-- ここにも該当するキャプチャ画像やGIFがあれば配置 -->
-    </div>
-</section>
-</section>
+                <h3>1. レベルデザインを活用したマネージャークラスの設計</h3>
+                <p><strong>取り組んだ背景・目的：</strong>自身のプログラミング技術向上のため、〇〇な課題を解決するコード設計に挑戦しました。</p>
+                <p><strong>実装と工夫：</strong>レベルデザインのデータをスムーズに管理・制御できるよう、マネージャークラスを自作して運用しました。</p>
+            </div>
+        </section>
         
         <div style="margin-top: 40px;">
             <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
         </div>
     </div>
-
 </body>
 </html>
