@@ -166,6 +166,22 @@
             margin-top: 50px;        /* 作品リンクとの間に50pxのスペースを作る */
         }
 
+        /* ポートフォリオ画像の基本スタイル */
+        .portfolio-img
+        {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        /* 画像を囲む枠の調整（中央寄せや余白） */
+        .image-container 
+        {
+            margin: 15px 0;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -255,8 +271,8 @@
                 <p><strong>実装内容：</strong>タイトル、ゲームメイン、クリア、ゲームオーバーといった各シーンの状態遷移と、一連のゲームループを一括管理するシステムを構築しました。</p>
 
                <div class="image-container">
-                    <img src="GameLoop.png" alt="リトライ時のUIおよび内部パラメータ初期化の比較" class="portfolio-img" style="max-width: 100%; height: auto;">
-            　 </div>
+                    <img src="GameLoop.png" alt="リトライ時のUIおよび内部パラメータ初期化の比較" class="portfolio-img">
+             　</div>
                 
                 <p><strong>こだわった箇所：</strong></p>
                 <ul>
