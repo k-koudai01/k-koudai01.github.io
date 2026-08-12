@@ -141,7 +141,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-
+        
         .gif-caption 
         {
             font-size: 14px;
@@ -149,10 +149,35 @@
             margin-top: 8px;
             color: #555;
         }
+
+        /* ギミックセクション専用の動画コンテナ */
+        .gimmick-gifcontainer
+        {
+          display.flex;
+            justify-content: center;
+            gap: 32px;                /* 動画と動画の間隔*/
+            margin: 20px 0;           /* 上下の余白 */
+            width: 100%;
+        }
+
+        /* ギミックの動画サイズを少し大きく調整 */
+        .gimmick-gifcontainer .gif-item
+        {
+            flex: 1;              /* 均等に配置 */
+            max-width: 320px;     /* 動画の最大横幅*/
+        }
+
+        .gimmick-gifcontainer video 
+        {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;  /* 角丸の引き継ぎ */
+            display: block;
+        }
         
         .appeal-gif 
         {
-            max-width: 600px;        /* 幅の最大値を600pxに制限（お好みの大きさに変更可能） */
+            max-width: 600px;        /* 幅の最大値を制限 */
             width: 100%;             /* 画面が狭い時は自動で縮小 */
             height: auto;            /* 縦横比を維持 */
             display: block;          /* 中央揃え用 */
@@ -301,16 +326,16 @@
                     宝箱や、巻物などのギミックシステムの構築をしました。
                 </p>
 
-                <div class="gifcontainer">
-                    <div class="gif-item">
-                        <video src="Otakara.mp4" autoplay loop muted playsinline aria-label="宝箱"></video>
-                        <p class="gif-caption">宝箱</p>
-                    </div>
-                    <div class="gif-item">
-                        <video src="Makimono.mp4" autoplay loop muted playsinline aria-label="まきもの"></video>
-                        <p class="gif-caption">まきもの</p>
-                    </div>
+                <div class="gimmick-gifcontainer">
+                <div class="gif-item">
+                    <video src="Otakara.mp4" autoplay loop muted playsinline aria-label="宝箱"></video>
+                    <p class="gif-caption">宝箱</p>
                 </div>
+                <div class="gif-item">
+                    <video src="Makimono.mp4" autoplay loop muted playsinline aria-label="まきもの"></video>
+                    <p class="gif-caption">まきもの</p>
+                </div>
+            </div>
 
                 <p><strong>こだわった箇所：</strong></p>
                 <ul>
