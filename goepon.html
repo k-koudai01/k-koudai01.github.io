@@ -153,18 +153,22 @@
         /* ギミックセクション専用の動画コンテナ */
         .gimmick-gifcontainer
         {
-          display.flex;
+            display: flex !important;
+            flex-direction: row !important;
             justify-content: center;
+            align-items: flex-start;
             gap: 32px;                /* 動画と動画の間隔*/
             margin: 20px 0;           /* 上下の余白 */
             width: 100%;
+        　　box-sizing: border-box;
         }
 
         /* ギミックの動画サイズを少し大きく調整 */
         .gimmick-gifcontainer .gif-item
         {
-            flex: 1;              /* 均等に配置 */
-            max-width: 320px;     /* 動画の最大横幅*/
+            flex: 1 1 0;             /* 均等に配置 */
+            max-width: 48%;    /* 動画の最大横幅*/
+            text-align: center;
         }
 
         .gimmick-gifcontainer video 
