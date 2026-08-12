@@ -303,18 +303,27 @@
 
                 <div class="gifcontainer">
                     <div class="gif-item">
-                        <video src="Otakara.mp4" autoplay loop muted playsinline alt="お宝"></video>
-                        <p class="gif-caption">お宝</p>
+                        <video src="Otakara.mp4" autoplay loop muted playsinline aria-label="宝箱"></video>
+                        <p class="gif-caption">宝箱</p>
                     </div>
                     <div class="gif-item">
-                        <video src="Makimono.mp4" autoplay loop muted playsinline alt="まきもの"></video>
+                        <video src="Makimono.mp4" autoplay loop muted playsinline aria-label="まきもの"></video>
                         <p class="gif-caption">まきもの</p>
                     </div>
                 </div>
 
                 <p><strong>こだわった箇所：</strong></p>
                 <ul>
-                    <li>。</li>
+                    <li>
+                        <strong>まきもの：</strong>
+                        巻物の判定にはカプセル対カプセルの当たり判定を採用しています。判定半径や上下オフセットの数値を調整することで、プレイヤーが自然に取得できるよう表現しました。
+                    </li>
+                    
+                    <li>
+                        <strong>宝箱：</strong>
+                        宝箱のベースと長押しによる開錠を設計しました。さらにモデルのメッシュ判定と角度補正テーブルを用いて、宝箱に当たった時のめり込みやスタックを防止する位置補正ロジックを実装しました。
+                    </li>
+                    
                 </ul>
                 
             </div>
@@ -323,7 +332,7 @@
             <div class="appeal-card">
                 <h2>技術的挑戦した箇所</h2>
 
-                <h3>1. レベルデザインを活用したマネージャークラスの設計</h3>
+                <h3>1. ステージ管理</h3>
                 <p><strong>取り組んだ背景・目的：</strong>自身のプログラミング技術向上のため、〇〇な課題を解決するコード設計に挑戦しました。</p>
                 <p><strong>実装と工夫：</strong>レベルデザインのデータをスムーズに管理・制御できるよう、マネージャークラスを自作して運用しました。</p>
                 
