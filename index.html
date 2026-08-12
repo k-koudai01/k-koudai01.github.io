@@ -176,7 +176,85 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
+        /* 制作作品の2列グリッドレイアウト */
+        .works-grid
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2列に並べる */
+            gap: 24px;                      /* 作品間のすき間 */
+            margin-top: 20px;
+        }
+
+        /* 作品カード */
+        .work-card
+        {
+            border: none;
+            background-color: transparent;
+            text-align: center;             /* テキスト全体を中央揃え */
+            padding: 0;
+        }
+
+        /* ゲーム画像 */
+        .work-card img 
+        {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto 16px auto;
+        }
+
+        /* 季節（冬季制作／夏季制作） */
+        .work-season
+        {
+            font-size: 16px;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        /* 作品タイトル */
+        .work-title 
+        {
+            font-size: 19px;
+            font-weight: bold;
+            color: #1a252f;
+            margin-bottom: 20px;
+            min-height: 28px; /* 高さを揃えてラインを綺麗に保つ */
+        }
+
+        /* 各情報のグループ */
+        .work-info-group
+        {
+            margin-bottom: 16px;
+        }
+
+        .work-info-label {
+            font-weight: bold;
+            font-size: 15px;
+            color: #333;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .work-info-value 
+        {
+            font-size: 13.5px;
+            color: #555;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* 画面幅が狭い場合（スマホ等）は1列にする設定 */
+        @media (max-width: 768px)
+        {
+            .works-grid 
+            {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -217,23 +295,86 @@
             </ul>
         </section>
 
-        <!-- 作品紹介 -->
-        <section id="works">
-            <h2>制作作品</h2>
+   <!-- 作品紹介 -->
+<section id="works">
+    <h2>ゲーム製作作品</h2>
+    
+    <div class="works-grid">
+        <!-- 作品1：ゴエポン -->
+        <div class="work-card">
+            <img src="game1.png" alt="あぶないっ！ゴエポン！～お宝奪還伝～">
             
-            <!-- 作品1 -->
-  <div class="work-card">
-    <div class="work-title">あぶないっ！ゴエポン！～お宝奪還伝～</div>
-    
-    <!-- 画像も左寄せ -->
-    <img src="game1.png" alt="作品1" style="width: 100%; max-width: 500px; height: auto; border-radius: 6px; margin: 12px 0; display: block;">
-    
-    <div style="margin: 8px 0;">
-        <span class="tech-tag">C++</span>
-        <span class="tech-tag">Visual Studio</span>
-        <span class="tech-tag">チーム開発</span>
+            <div class="work-season">冬季制作</div>
+            <div class="work-title">あぶないっ！ゴエポン！～お宝奪還伝～</div>
+            
+            <div class="work-info-group">
+                <span class="work-info-label">ゲームジャンル</span>
+                <p class="work-info-value">3D変化ステルスアクションゲーム</p>
+            </div>
+
+            <div class="work-info-group">
+                <span class="work-info-label">製作期間</span>
+                <p class="work-info-value">約3ヵ月 (2025/11/28～2026/3/23)</p>
+            </div>
+
+            <div class="work-info-group">
+                <span class="work-info-label">制作人数</span>
+                <p class="work-info-value">11名（プランナー2名、プログラマー3名、デザイナー6名）</p>
+            </div>
+
+            <div class="work-info-group">
+                <span class="work-info-label">担当箇所</span>
+                <p class="work-info-value">プレイヤー、開発支援ツール、アニメーション・エフェクト、サウンド、敵巡回、チェックポイント</p>
+            </div>
+
+            <div class="work-info-group">
+                <span class="work-info-label">開発環境</span>
+                <p class="work-info-value">C/C++、Python、Visual Studio、DXライブラリ</p>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="goepon.html" class="btn">詳細を見る</a>
+            </div>
+        </div>
+
+        <!-- 作品2：Magnetic Jumper -->
+        <div class="work-card">
+            <img src="game2.png" alt="Magnetic Jumper">
+            
+            <div class="work-season">夏季制作</div>
+            <div class="work-title">Magnetic Jumper</div>
+            
+            <div class="work-info-group">
+                <span class="work-info-label">ゲームジャンル</span>
+                <p class="work-info-value">ハイスピード2Dアクション</p>
+            </div>
+
+            <div class="work-info-group">
+                <span class="work-info-label">製作期間</span>
+                <p class="work-info-value">約3ヵ月 (2025/7/22～2025/10/1)</p>
+            </div>
+
+            <div class="work-info-group">
+                <span class="work-info-label">制作人数</span>
+                <p class="work-info-value">13名（プランナー2名、プログラマー2名、デザイナー9名）</p>
+            </div>
+
+            <div class="work-info-group">
+                <span class="work-info-label">担当箇所</span>
+                <p class="work-info-value">画面遷移、ギミック、アニメーション管理、プレイヤー(メイン攻撃やダッシュなどのアクション以外)、演出</p>
+            </div>
+
+            <div class="work-info-group">
+                <span class="work-info-label">開発環境</span>
+                <p class="work-info-value">C/C++、Visual Studio、DXライブラリ</p>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="magnetic_jumper.html" class="btn">詳細を見る</a>
+            </div>
+        </div>
     </div>
-    
+</section>
     <p><strong>ゲームジャンル：</strong>3D変身ステルスアクションゲーム</p>
     <p><strong>制作期間：</strong>3カ月</p>
     <p><strong>制作人数：</strong>計11名 (プランナー:2, プログラマー:3, デザイナー:6)</p>
