@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乱世見聞記 - 石森虹大 ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css"> <!-- スタイルシートがある場合 -->
+    <!-- もしindex.html等に<style>タグを直書きしている場合は、その共通スタイルをここに貼ってください -->
+</head>
+<body>
 
+    <!-- サイドバー（共通ナビゲーション） -->
+    <div class="sidebar">
+        <h1>石森 虹大</h1>
+        <p class="subtitle">ゲームプログラマー</p>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">自己紹介</a></li>
+                <li><a href="index.html#skills">スキル</a></li>
+                <li><a href="index.html#works">制作作品</a></li>
+                <li><a href="index.html#history">経歴</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="content">
+        <section>
+            <!-- 戻るボタン -->
+            <a href="index.html" class="back-link">← 作品一覧に戻る</a>
+
+            <h2 class="work-title">乱世見聞記</h2>
+            <p class="work-sub">2Dステルスアクションゲーム</p>
+
+            <!-- メイン画像・PV動画 -->
+            <div class="media-container">
+                <!-- 画像の場合 -->
+                <img src="Ransekenbunki.png" alt="乱世見聞記 タイトル画面" class="work-detail-img">
+                <!-- 動画があれば以下を有効化 -->
+                <!-- <video src="videos/Ranse_PV.mp4" controls width="100%"></video> -->
+            </div>
+
+            <!-- 基本情報テーブル/リスト -->
+            <div class="work-meta-grid">
+                <div class="work-info-group">
+                    <span class="work-info-label">制作期間</span>
+                    <p class="work-info-value">約3ヵ月（2025/07/22〜2025/10/01）</p>
+                </div>
+                <div class="work-info-group">
+                    <span class="work-info-label">制作人数</span>
+                    <p class="work-info-value">10名（プランナー2名、プログラマー1名、デザイナー7名）</p>
+                </div>
+                <div class="work-info-group">
+                    <span class="work-info-label">担当箇所</span>
+                    <p class="work-info-value">プログラム全般（単独実装）：キャラクター挙動、ゲームシステム・当たり判定、アニメーション管理、画面遷移、演出処理</p>
+                </div>
+                <div class="work-info-group">
+                    <span class="work-info-label">開発環境</span>
+                    <p class="work-info-value">C/C++、Visual Studio、DXライブラリ</p>
+                </div>
+            </div>
+
+            <!-- リンクボタン（GitHubリポジトリへのリンク） -->
+            <div class="link-buttons">
+                <!-- 先ほど作成したGitHubリポジトリのURLを指定 -->
+                <a href="https://github.com/k-koudai01/ranse-kenbunki" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                    GitHubでソースコードを見る
+                </a>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- 作品概要 -->
+            <h3>作品概要</h3>
+            <p>
+                （ここに『乱世見聞記』がどんなゲームなのか、コンセプトや世界観、プレイヤーの目的などを1〜2段落で記載します）
+            </p>
+
+            <!-- 主な実装内容（担当部分の深掘り） -->
+            <h3>担当したシステム・プログラム実装</h3>
+            
+            <h4>1. キャラクター挙動・ステルスアクション実装</h4>
+            <p>
+                （プレイヤーの移動、しゃがみ、隠れる動作、敵に見つからないための挙動制御などについて書きます）
+            </p>
+
+            <h4>2. 当たり判定・ゲームシステム</h4>
+            <p>
+                （プレイヤーと敵・マップ・ギミックの当たり判定処理、ゲームループ、勝敗判定などについて書きます）
+            </p>
+
+            <h4>3. アニメーション管理・演出制御</h4>
+            <p>
+                （状態に応じたスプライト・アニメーションの切り替え、画面遷移やエフェクト演出の制御について書きます）
+            </p>
+
+            <!-- 工夫した点・課題解決（1人開発での強み） -->
+            <h3>1人開発における工夫と課題解決</h3>
+            <p>
+                プログラマー1名で全システムを構築するため、〇〇という設計を行いました。また、開発途中で〇〇という課題が発生しましたが、〇〇のように実装を見直すことで解決しました。
+            </p>
+
+        </section>
+    </div>
+
+</body>
+</html>
