@@ -116,6 +116,103 @@
             line-height: 1.8px;
         }
 
+         /* 動画を横並びにする親要素の設定 */
+        .gifcontainer
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            max-width: 100%;       /* 親要素の中に収める */
+            margin: 20px 0 35px 0;
+        }
+
+        /* 1つ1つの動画アイテム枠 */
+        .gif-item 
+        {
+            flex: 1;
+            min-width: 200px;      /* スマホ等で崩れない最小幅 */
+            max-width: 300px;      /* ここで1つあたりの「動画の大きさ」を調整できます */
+            text-align: center;
+        }
+
+        /* 動画自体のサイズ設定 */
+        .gif-item video 
+        {
+            width: 100%;           /* 枠いっぱいに広げる */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .gif-caption 
+        {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 8px;
+            color: #555;
+        }
+
+        /* ギミックセクション専用の動画コンテナ */
+        .gimmick-gifcontainer
+        {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 32px;                /* 動画と動画の間隔*/
+            margin: 20px 0;           /* 上下の余白 */
+            width: 100%;
+        　　box-sizing: border-box;
+        }
+
+        /* ギミックの動画サイズを少し大きく調整 */
+        .gimmick-gifcontainer .gif-item
+        {
+            flex: 1 1 0;             /* 均等に配置 */
+            max-width: 48%;    /* 動画の最大横幅*/
+            text-align: center;
+        }
+
+        .gimmick-gifcontainer video 
+        {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;  /* 角丸の引き継ぎ */
+            display: block;
+        }
+
+        .appeal-gif 
+        {
+            max-width: 600px;        /* 幅の最大値を制限 */
+            width: 100%;             /* 画面が狭い時は自動で縮小 */
+            height: auto;            /* 縦横比を維持 */
+            display: block;          /* 中央揃え用 */
+            margin: 20px auto;       /* 上下に20pxの余白を作り、左右中央に配置 */
+            border-radius: 8px;      /* 角を少し丸くして見た目を綺麗に */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* うっすら影をつけて浮き上がらせる */
+        }
+
+        .appeal-section
+        {
+            margin-top: 50px;        /* 作品リンクとの間に50pxのスペースを作る */
+        }
+
+        /* ポートフォリオ画像の基本スタイル */
+        .portfolio-img
+        {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        /* 画像を囲む枠の調整（中央寄せや余白） */
+        .image-container 
+        {
+            margin: 15px 0;
+            text-align: center;
+        }
         
     </style>    
 </head>
@@ -131,6 +228,33 @@
             <span class="tech-tag">C/C++</span>
             <span class="tech-tag">Visual Studio</span>
             <span class="tech-tag">チーム開発</span>
+        </div>
+        
+<!-- 作品リンク -->
+        <section>
+            <h2>作品リンク</h2>
+            <div class="link-buttons">
+                <a href="https://github.com/k-koudai01/ranse-kenbunki.git" class="btn" target="_blank">GitHubソースコードを見る</a>
+                <a href="https://drive.google.com/file/d/1IQKEBDAPsy4939oy8BlkQpQqS7lspllu/view?usp=sharing" class="btn" target="_blank">実演動画を見る</a>
+            </div>
+        </section>
+
+<!-- アピール箇所全体 -->
+        <section>
+        <h1 class="appeal-main-title">アピール箇所</h1>
+
+        <!-- 【分岐1】提案・実装 -->
+        <div class="appeal-card">
+            <h2>提案・実装した箇所</h2>
+
+             
+
+
+            
+        </section>    
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
         </div>
     </div>    
 </body>
