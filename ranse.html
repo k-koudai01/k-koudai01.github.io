@@ -289,6 +289,8 @@
         <!-- 【分岐1】担当箇所 -->
         <div class="appeal-card">
             <h2>頑張った・こだわった箇所</h2>
+
+            /* 1 */
             <h3>1.敵AI</h3>
             <img src="Enemy_AI.gif" alt="敵AI" class="appeal-gif">
             <ui>
@@ -306,6 +308,7 @@
                 </li>
             </ui>
 
+            /* 2 */
             <h3>2.タイトル画面</h3>
             <img src="ranse_Title.gif" alt="タイトル" class="appeal-gif">
             <ui>
@@ -326,6 +329,7 @@
                 </li>
             </ui>    
 
+            /* 3 */
             <h3>3.Tiledを活用したレベルデザイン</h3>
             
             <div class="tiled-image-container">
@@ -348,6 +352,24 @@
                 <strong>イベントボックス</strong>
                     <p>特定エリアへの進入でシナリオや会話イベントが発生する「イベントボックス」を構築しました。Tiled上で領域の大きさや位置を配置・調整できるようにしました。</p>
                 </li>
+            </ui>
+
+            /* 4 */
+            <h3>4.マップチップ</h3>
+            <p><st>
+            <img src="ranse_Sneeku.gif" alt="隠れマップチップ" class="appeal-gif">
+            <ui>
+                 <li>
+                    <strong>ギミック</strong>
+                    <p>マップチップの判定を利用し、プレイヤーが水や影などの特定の場所で敵の視界から身を隠す「隠れアクション」を実装しました。</p>
+                </li>
+                
+                <li>
+                    <strong>高い拡張性の確保</strong>
+                    <p>
+                        新しいギミックを追加する際にも、既存の処理を書き換えることなく新しいタイプIDと判定を追加するだけで簡単に拡張できる設計にしました。
+                    </p>   
+                </li>  
             </ui>
          
         </section>    
