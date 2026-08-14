@@ -1,12 +1,14 @@
-<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>あぶないっ！ゴエポン！～お宝奪還伝～ - 詳細</title>
     <style>
-        body 
-        {
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
             margin: 0;
             padding: 40px 20px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,87 +16,77 @@
             background-color: #f9f9f9;
         }
 
-        .container
-        {
+        .container {
             max-width: 800px;
             margin: 0 auto;
             background: #ffffff;
-            padding: 30px;
+            padding: 40px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        .main-title 
-        {
-            font-size: 35px;
+        .main-title {
+            font-size: 32px;
             color: #1a252f;
             border-bottom: 3px solid #00d1b2;
             padding-bottom: 8px;
             margin-top: 20px;
         }
 
-        .appeal-main-title 
-        {
-            font-size: 35px;
+        .section-title {
+            font-size: 26px;
             color: #1a252f;
             border-bottom: 3px solid #00d1b2;
             padding-bottom: 8px;
-            margin-top: 100px;
+            margin-top: 60px;
             margin-bottom: 25px;
         }
-        
-      h2
-        {
-           font-size: 30px;
+
+        h2 {
+            font-size: 24px;
             color: #2c3e50;
-            margin-top: 30px;
+            margin-top: 35px;
             margin-bottom: 15px;
-    
-            /* 文字の長さぴったりに線を切る設定 */
             width: fit-content;
-    
-            /* 左側の縦バー（緑色：!importantで確実に表示） */
             border-left: 6px solid #00d1b2;
             padding-left: 14px;
-    
-            /* 下側の横線（2pxのグレー） */
             border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
+            padding-bottom: 6px;
         }
 
-        /* 3. 内容の見出し（1. タイトル画面のバウンド演出 など） */
-        h3 
-        {
-            font-size: 21px;
+        h3 {
+            font-size: 20px;
             color: #333333;
-            margin-top: 45px;
+            margin-top: 35px;
             margin-bottom: 10px;
             font-weight: bold;
         }
 
-        /* 4. 内容の中身（本文） */
-        p 
-        {
+        p {
             font-size: 16px;
             line-height: 1.7;
             color: #444444;
             margin-bottom: 10px;
         }
 
-        .tech-tag 
-        {
+        ul {
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        .tech-tag {
             display: inline-block;
             background: #eef9f6;
             color: #009688;
-            padding: 3px 8px;
+            padding: 4px 10px;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: bold;
-            margin-right: 5px;
+            margin-right: 6px;
+            margin-top: 5px;
         }
 
-        .btn
-        {
+        .btn {
             display: inline-block;
             padding: 8px 16px;
             background-color: #1a252f;
@@ -102,135 +94,102 @@
             text-decoration: none;
             border-radius: 4px;
             font-size: 14px;
-            margin-right: 15px;
+            margin-right: 10px;
             margin-top: 10px;
-            transition: 0.2s;
+            transition: background-color 0.2s;
         }
 
-        .btn:hover
-        {
+        .btn:hover {
             background-color: #00d1b2;
         }
 
-        .back-btn
-        {
+        .back-btn {
             background-color: #7f8c8d;
         }
 
-        ul 
-        {
-            line-height: 1.8;
+        .header-img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 6px;
+            margin: 20px auto;
+            display: block;
         }
-        
-       /* 動画を横並びにする親要素の設定 */
-        .gifcontainer 
-        {
+
+        .appeal-gif {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 複数動画・画像レイアウト */
+        .media-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 16px;
             justify-content: center;
-            max-width: 100%;       /* 親要素の中に収める */
-            margin: 20px 0 35px 0;
+            margin: 20px 0 30px 0;
         }
 
-        /* 1つ1つの動画アイテム枠 */
-        .gif-item 
-        {
+        .media-item {
             flex: 1;
-            min-width: 200px;      /* スマホ等で崩れない最小幅 */
-            max-width: 300px;      /* ここで1つあたりの「動画の大きさ」を調整できます */
+            min-width: 200px;
+            max-width: 300px;
             text-align: center;
+            margin: 0;
         }
 
-        /* 動画自体のサイズ設定 */
-        .gif-item video 
-        {
-            width: 100%;           /* 枠いっぱいに広げる */
+        .media-item video, 
+        .media-item img {
+            width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        
-        .gif-caption 
-        {
-            font-size: 18px;
+
+        .media-caption {
+            font-size: 15px;
             font-weight: bold;
             margin-top: 8px;
             color: #555;
         }
 
-        /* ギミックセクション専用の動画コンテナ */
-        .gimmick-gifcontainer
-        {
-            display: flex !important;
-            flex-direction: row !important;
+        .gimmick-grid {
+            display: flex;
+            gap: 20px;
             justify-content: center;
-            align-items: flex-start;
-            gap: 32px;                /* 動画と動画の間隔*/
-            margin: 20px 0;           /* 上下の余白 */
-            width: 100%;
-        　　box-sizing: border-box;
+            margin: 20px 0;
         }
 
-        /* ギミックの動画サイズを少し大きく調整 */
-        .gimmick-gifcontainer .gif-item
-        {
-            flex: 1 1 0;             /* 均等に配置 */
-            max-width: 48%;    /* 動画の最大横幅*/
+        .gimmick-grid .media-item {
+            max-width: 48%;
+        }
+
+        .image-container {
+            margin: 20px 0;
             text-align: center;
         }
 
-        .gimmick-gifcontainer video 
-        {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;  /* 角丸の引き継ぎ */
-            display: block;
-        }
-        
-        .appeal-gif 
-        {
-            max-width: 600px;        /* 幅の最大値を制限 */
-            width: 100%;             /* 画面が狭い時は自動で縮小 */
-            height: auto;            /* 縦横比を維持 */
-            display: block;          /* 中央揃え用 */
-            margin: 20px auto;       /* 上下に20pxの余白を作り、左右中央に配置 */
-            border-radius: 8px;      /* 角を少し丸くして見た目を綺麗に */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* うっすら影をつけて浮き上がらせる */
-        }
-
-        .appeal-section
-        {
-            margin-top: 50px;        /* 作品リンクとの間に50pxのスペースを作る */
-        }
-
-        /* ポートフォリオ画像の基本スタイル */
-        .portfolio-img
-        {
+        .portfolio-img {
             max-width: 100%;
             height: auto;
-            border-radius: 4px;
-            display: block;
+            border-radius: 6px;
         }
-
-        /* 画像を囲む枠の調整（中央寄せや余白） */
-        .image-container 
-        {
-            margin: 15px 0;
-            text-align: center;
-        }
-
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <main class="container">
         <!-- 戻るボタン -->
         <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
 
         <h1 class="main-title">あぶないっ！ゴエポン！～お宝奪還伝～</h1>
         
-        <img src="game1.png" alt="作品画像" style="width: 100%; max-width: 600px; height: auto; border-radius: 6px; margin: 15px 0;">
+        <img src="game1.png" alt="あぶないっ！ゴエポン！メイン画像" class="header-img">
 
         <div>
             <span class="tech-tag">C/C++</span>
@@ -238,21 +197,21 @@
             <span class="tech-tag">チーム開発</span>
         </div>
 
-<!-- 作品リンク -->
+        <!-- 作品リンク -->
         <section>
             <h2>作品リンク</h2>
             <div class="link-buttons">
-                <a href="https://github.com/uh41/Goepon" class="btn" target="_blank">GitHubソースコードを見る</a>
-                <a href="https://drive.google.com/file/d/1IQKEBDAPsy4939oy8BlkQpQqS7lspllu/view?usp=sharing" class="btn" target="_blank">実演動画を見る</a>
+                <a href="https://github.com/uh41/Goepon" class="btn" target="_blank" rel="noopener">GitHubソースコードを見る</a>
+                <a href="https://drive.google.com/file/d/1IQKEBDAPsy4939oy8BlkQpQqS7lspllu/view?usp=sharing" class="btn" target="_blank" rel="noopener">実演動画を見る</a>
             </div>
         </section>
 
-<!-- アピール箇所全体 -->
+        <!-- アピール箇所全体 -->
         <section>
-            <h1 class="appeal-main-title">アピール箇所</h1>
+            <h2 class="section-title">アピール箇所</h2>
 
-            <!-- 【分岐1】提案・実装 -->
-            <div class="appeal-card">
+            <!-- 【1】提案・実装 -->
+            <article class="appeal-card">
                 <h2>提案・実装した箇所</h2>
 
                 <h3>1. タイトル画面</h3>
@@ -266,26 +225,26 @@
                 <p><strong>こだわった箇所：</strong>ふすまの開閉速度にイージングを活用し、「閉まる時は素早く、開く時はゆっくり」と緩急をつけることで、物語が幕を開けるような臨場感を表現しました。</p>
 
                 <h3>3. ゲームメインのカメラ演出</h3>
-                <p><strong>提案内容:</strong>ゲームの進行状況に合わせたカメラ演出を導入することで、プレイヤーの臨場感や達成感がより高まると考え、提案・実装しました。</p>
+                <p><strong>提案内容：</strong>ゲームの進行状況に合わせたカメラ演出を導入することで、プレイヤーの臨場感や達成感がより高まると考え、提案・実装しました。</p>
 
-                <div class="gifcontainer">
-                    <div class="gif-item">
-                        <video src="Camera_Intro_ver1.1.mp4" autoplay loop muted playsinline alt="イントロ演出"></video>
-                        <p class="gif-caption">イントロ演出</p>
-                    </div>
-                    <div class="gif-item">
-                    <video src="Camera_Treasuar_ver1.0.mp4" autoplay loop muted playsinline alt="宝箱開封演出"></video>
-                    <p class="gif-caption">宝箱開封演出</p>
-                    </div>
-                    <div class="gif-item">
-                        <video src="Camera_GameClear_ver1.0.mp4" autoplay loop muted playsinline alt="ゴールクリア演出"></video>
-                        <p class="gif-caption">ゴールクリア演出</p>
-                    </div>
+                <div class="media-grid">
+                    <figure class="media-item">
+                        <video src="Camera_Intro_ver1.1.mp4" autoplay loop muted playsinline></video>
+                        <figcaption class="media-caption">イントロ演出</figcaption>
+                    </figure>
+                    <figure class="media-item">
+                        <video src="Camera_Treasuar_ver1.0.mp4" autoplay loop muted playsinline></video>
+                        <figcaption class="media-caption">宝箱開封演出</figcaption>
+                    </figure>
+                    <figure class="media-item">
+                        <video src="Camera_GameClear_ver1.0.mp4" autoplay loop muted playsinline></video>
+                        <figcaption class="media-caption">ゴールクリア演出</figcaption>
+                    </figure>
                 </div>
                         
                 <p><strong>実装したカメラ演出</strong></p>
                 <ul>
-                    <li><strong>イントロ演出:</strong>ステージ開始時にゴエポンへズームするカメラ演出を入れ、操作対象を直感的に伝えつつ、モデルの魅力を引き立てました。さらにUIを表示させて、目的を自然に把握できる役割を持たせています。</li>
+                    <li><strong>イントロ演出：</strong>ステージ開始時にゴエポンへズームするカメラ演出を入れ、操作対象を直感的に伝えつつ、モデルの魅力を引き立てました。さらにUIを表示させて、目的を自然に把握できる役割を持たせています。</li>
                     <li><strong>宝箱開封演出：</strong>宝箱を開けている際にカメラが寄る演出で、お宝獲得の期待感を強調。</li> 
                     <li><strong>ゴールクリア演出：</strong>クリア時にキャラクターを引き立たせるカメラアングルに切り替え、達成感を演出。</li>
                 </ul>
@@ -294,23 +253,24 @@
                 <h3>4. UI全般の実装と操作感向上の提案</h3>
                 <p><strong>提案内容：</strong>UIを単に表示するだけでなく、ボタン選択・決定時に反応を返すことで操作感が向上すると考え、提案・実装いたしました。</p>
 
-                <div style="text-align: center; margin: 20px 0;">
+                <figure class="image-container">
                     <img src="UI_Pushing.gif" alt="UIのボタン押し込み演出" class="appeal-gif">
-                    <p class="gif-caption">ボタン押下時の視覚フィードバック（画像のリアルタイム切り替え）</p>
-                </div>
+                    <figcaption class="media-caption">ボタン押下時の視視覚フィードバック（画像のリアルタイム切り替え）</figcaption>
+                </figure>
                 
                 <p><strong>こだわった箇所：</strong>ボタンを押した瞬間に画像を即座に切り替え、押し込まれた状態を表示する仕組みを実装しました。入力に対してズレなく確実に画像が切り替わるレスポンスを意識したことで、直感的で気持ちの良い操作感を実現できました。</p>
-                
-            <!-- 【分岐2】その他に実装したもの -->
-            <div class="appeal-card">
+            </article>
+
+            <!-- 【2】その他に実装したもの -->
+            <article class="appeal-card">
                 <h2>その他に実装した箇所</h2>
 
                 <h3>1. ゲームループ</h3>
                 <p><strong>実装内容：</strong>タイトル、ゲームメイン、クリア、ゲームオーバーといった各シーンの状態遷移と、一連のゲームループを一括管理するシステムを構築しました。</p>
 
-               <div class="image-container">
+                <div class="image-container">
                     <img src="GameLoop.png" alt="リトライ時のUIおよび内部パラメータ初期化の比較" class="portfolio-img">
-             　</div>
+                </div>
                 
                 <p><strong>こだわった箇所：</strong></p>
                 <ul>
@@ -318,14 +278,11 @@
                     <li>シーン遷移時のメモリリークを防ぐため、演出カメラやサウンド等のリソース安全破棄を徹底</li>
                 </ul>
 
-                <h3>2.シナリオ</h3>
-                <p>
-                    <strong>実装内容：</strong>
-                    漫画風のシナリオ演出システムを構築しました。
-                </p>
+                <h3>2. シナリオ</h3>
+                <p><strong>実装内容：</strong>漫画風のシナリオ演出システムを構築しました。</p>
 
                 <div class="image-container">
-                    <img src="Scenario .gif" alt="シナリオ再生システムの動作画面" class="appeal-gif">
+                    <img src="Scenario.gif" alt="シナリオ再生システムの動作画面" class="appeal-gif">
                 </div>
 
                 <p><strong>こだわった箇所：</strong></p>
@@ -333,22 +290,19 @@
                     <li>画像リソースと割り当てSEをリストで管理する設計にしました。これにより、シナリオのコマ数が増減した場合でも全体のフェード演出・ページ送り・サウンド制御ロジックを修正することなく柔軟に対応可能です。</li>
                 </ul>
 
-                <h3>3.ギミック</h3>
-                <p>
-                    <strong>実装内容:</strong>
-                    宝箱や、巻物などのギミックシステムの構築をしました。
-                </p>
+                <h3>3. ギミック</h3>
+                <p><strong>実装内容：</strong>宝箱や、巻物などのギミックシステムの構築をしました。</p>
 
-                <div class="gimmick-gifcontainer">
-                <div class="gif-item">
-                    <video src="Otakara.mp4" autoplay loop muted playsinline aria-label="宝箱"></video>
-                    <p class="gif-caption">宝箱</p>
+                <div class="gimmick-grid">
+                    <figure class="media-item">
+                        <video src="Otakara.mp4" autoplay loop muted playsinline></video>
+                        <figcaption class="media-caption">宝箱</figcaption>
+                    </figure>
+                    <figure class="media-item">
+                        <video src="Makimono.mp4" autoplay loop muted playsinline></video>
+                        <figcaption class="media-caption">まきもの</figcaption>
+                    </figure>
                 </div>
-                <div class="gif-item">
-                    <video src="Makimono.mp4" autoplay loop muted playsinline aria-label="まきもの"></video>
-                    <p class="gif-caption">まきもの</p>
-                </div>
-            </div>
 
                 <p><strong>こだわった箇所：</strong></p>
                 <ul>
@@ -356,31 +310,18 @@
                         <strong>まきもの：</strong>
                         巻物の判定にはカプセル対カプセルの当たり判定を採用しています。判定半径や上下オフセットの数値を調整することで、プレイヤーが自然に取得できるよう表現しました。
                     </li>
-                    
                     <li>
                         <strong>宝箱：</strong>
                         宝箱のベースと長押しによる開錠を設計しました。さらにモデルのメッシュ判定と角度補正テーブルを用いて、宝箱に当たった時のめり込みやスタックを防止する位置補正ロジックを実装しました。
                     </li>
-                    
                 </ul>
-                
-            </div>
-          
-            <!-- 【分岐3】技術的挑戦 
-            <div class="appeal-card">
-                <h2>技術的挑戦した箇所</h2>
+            </article>
 
-                <h3>1. ステージ管理</h3>
-                <p><strong>取り組んだ背景・目的：</strong>自身のプログラミング技術向上のため、〇〇な課題を解決するコード設計に挑戦しました。</p>
-                <p><strong>実装と工夫：</strong>レベルデザインのデータをスムーズに管理・制御できるよう、マネージャークラスを自作して運用しました。</p>
-                
-            </div>
-        　　-->
         </section>
         
         <div style="margin-top: 40px;">
             <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
         </div>
-    </div>
+    </main>
 </body>
 </html>
