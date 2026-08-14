@@ -194,24 +194,26 @@
         .tiled-image-container 
         {
             display: flex;
-            flex-direction: column; /* 縦並びにする */
-            gap: 20px;
+            flex-direction: row;        /* 横並び指定 */
+            justify-content: space-between;
+            gap: 16px;                   /* 画像どうしの間隔 */
             margin: 20px 0;
+            width: 100%;
         }
 
         .tiled-item 
         {
-            flex: 1;
-            min-width: 200px;      /* スマホ等で崩れない最小幅 */
-            max-width: 300px;      /* ここで1つあたりの「動画の大きさ」を調整できます */
+            flex: 1;                    
+            max-width: 49%;            
             text-align: center;
         }
 
         .tiled-img 
         {
-            width: 100%;
-            height: auto;
-            border-radius: 12px; 
+            width: 100%;                 /* 枠いっぱいに広げる */
+            height: auto;                /* 縦横比を維持（文字が潰れるのを防ぐ） */
+            border-radius: 8px;          /* 角丸 */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             display: block;
         }
         
@@ -329,11 +331,11 @@
             <div class="tiled-image-container">
             <div class="tiled-item">
                 <img src="tiled_ranse.png" alt="Tiledでの設定画面" class="tiled-img">
-                <p class="gif-caption">① Tiledでの設定画面（パラメータ・イベントボックス配置）</p>
+                <p class="gif-caption">Tiledでの設定画面</p>
             </div>
             <div class="tiled-item">
                 <img src="game_ranse.png" alt="実際のゲーム画面" class="tiled-img">
-                <p class="gif-caption">② 実際のゲーム画面（JSONロードによる配置の再現）</p>
+                <p class="gif-caption">実際のゲーム画面</p>
             </div>
         </div>
             
