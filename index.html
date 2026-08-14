@@ -5,201 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>石森虹大 - ポートフォリオ</title>
     <style>
-       /* 基本スタイル */
-        body
-       {
+        /* === 基本スタイル === */
+        *{
+            box-sizing: border-box;
+        }
+
+        body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             color: #333;
             background-color: #f9f9f9;
-       }
-       
-       /* サイドバー */
-       .sidebar
-       {
-           width: 260px;
-           background-color: #1a252f;
-           color: #ffffff;
-           min-height: 100vh;
-           paddding: 30px 20px;
-           box-sizing: border-box;
-           position: fixed;
-       }
-        
-        /* 名前：大きめ＆中央揃え */
-       .sidebar h1
-       {
-            font-size: 50px;
+        }
+
+        /* === サイドバー === */
+        .sidebar {
+            width: 260px;
+            background-color: #1a252f;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 30px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar h1 {
+            font-size: 32px;
             font-weight: bold;
             text-align: center;
-            margin-top: 10px;
-            margin-bottom: 8px;
+            margin: 10px 0 8px 0;
             letter-spacing: 2px;
-       }
+        }
 
-       .sidebar .subtitle
-       {
-            font-size: 17px;
-            color: #00d1b2; /* アクセントカラー（エメラルド） */
+        .sidebar .subtitle {
+            font-size: 16px;
+            color: #00d1b2;
             text-align: center;
             margin-bottom: 30px;
-       }
+        }
 
-       .sidebar ul 
-       {
+        .sidebar nav ul {
             list-style: none;
             padding: 0;
-       }
+            margin: 0;
+        }
 
-       .sidebar li 
-       {
-            margin-bottom: 20px;
-       }
+        .sidebar nav li {
+            margin-bottom: 15px;
+        }
 
-       .sidebar a 
-       {
+        .sidebar nav a {
             color: #ecf0f1;
             text-decoration: none;
             font-weight: bold;
             display: block;
-            font-size: 20px;
-            padding: 14px 18px;
+            font-size: 18px;
+            padding: 12px 16px;
             border-radius: 4px;
-            transition: 0.2s;
+            transition: background-color 0.2s, color 0.2s;
         }
 
-        .sidebar a:hover 
-        {
+        .sidebar nav a:hover {
             background-color: #2c3e50;
             color: #00d1b2;
         }
 
-        /* 右側：メインエリア */
-        .content 
-        {
+        /* === メインコンテンツエリア === */
+        .content {
             margin-left: 260px;
             width: calc(100% - 260px);
             max-width: 1200px;
-            margin-right: auto;
             padding: 50px;
-            box-sizing: border-box;
         }
 
-        section 
-        {
+        section {
             background: #ffffff;
-            padding: 40px 50px;  /*カード内側の余白を広げる*/
-            margin-bottom: 40px; /*カード同士のすき間を広げるために下に落とす */
+            padding: 40px 50px;
+            margin-bottom: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
 
-        h2 
-        {
-            font-size: 30px;
+        h2 {
+            font-size: 28px;
             color: #1a252f;
             border-bottom: 3px solid #00d1b2;
             padding-bottom: 8px;
             margin-top: 0;
+            margin-bottom: 20px;
         }
 
-        /* 作品カード風デザイン */
-        .work-card
-        {
-            border: 1px solid #e1e8ed;
-            border-radius: 6px;
-            padding: 20px;
-            margin-top: 20px;
-            background-color: #fafafa;
+        /* === スキルリスト === */
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 2;
         }
 
-        .work-title
-        {
-            font-size: 18px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        .tech-tag
-        {
+        /* === 共通ボタン === */
+        .btn {
             display: inline-block;
-            background: #eef9f6;
-            color: #009688;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-right: 5px;
-        }
-
-       .btn 
-        {
-            display: inline-block;
-            padding: 6px 14px;
+            padding: 8px 16px;
             background-color: #1a252f;
             color: #fff;
             text-decoration: none;
             border-radius: 4px;
-            font-size: 13px;
-            margin-right: 20px;
-            margin-top: 10px;
+            font-size: 14px;
+            transition: background-color 0.2s;
         }
 
-        .btn:hover 
-        {
+        .btn:hover {
             background-color: #00d1b2;
         }
-        .work-title 
-        {
-            font-size: 1.35rem;
-            font-weight: bold;
-            color: #222222;
-            margin-bottom: 12px;
-        }
 
-        .work-card p, 
-        .work-card li
-        {
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .work-card ul 
-        {
-            padding-left: 20px;
-            margin-top: 8px;
-        }
-
-        .work-card img 
-        {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* 制作作品の2列グリッドレイアウト */
-        .works-grid
-        {
+        /* === 制作作品レイアウト === */
+        .works-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* 2列に並べる */
-            gap: 30px;                      /* 作品間のすき間 */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
             margin-top: 20px;
         }
 
-        /* 作品カード */
-        .work-card
-        {
-            border: none;
-            background-color: transparent;
-            text-align: center;             /* テキスト全体を中央揃え */
+        .work-card {
+            background-color: #ffffff;
+            text-align: center;
             padding: 0;
         }
 
-        /* ゲーム画像 */
-        .work-card img 
-        {
+        .work-card img {
             width: 100%;
             height: auto;
             border-radius: 12px;
@@ -208,33 +144,26 @@
             margin: 0 auto 16px auto;
         }
 
-        /* 季節（冬季制作／夏季制作） */
-        .work-season
-        {
+        .work-season {
             font-size: 16px;
             font-weight: bold;
             color: #444;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
-        /* 作品タイトル */
-        .work-title 
-        {
-            font-size: 19px;
+        .work-title {
+            font-size: 20px;
             font-weight: bold;
             color: #1a252f;
             margin-bottom: 20px;
-            min-height: 28px; /* 高さを揃えてラインを綺麗に保つ */
+            min-height: 28px;
         }
 
-        /* 各情報のグループ */
-        .work-info-group
-        {
+        .work-info-group {
             margin-bottom: 16px;
         }
 
-        .work-info-label 
-        {
+        .work-info-label {
             font-weight: bold;
             font-size: 15px;
             color: #333;
@@ -242,43 +171,58 @@
             margin-bottom: 2px;
         }
 
-        .work-info-value 
-        {
-            font-size: 13.5px;
+        .work-info-value {
+            font-size: 14px;
             color: #555;
             line-height: 1.5;
             margin: 0;
         }
 
-        /* 画面幅が狭い場合（スマホ等）は1列にする設定 */
-        @media (max-width: 768px)
-        {
-            .works-grid 
-            {
+        .work-action {
+            margin-top: 20px;
+        }
+
+        /* === Responsive (スマホ対応) === */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                position: relative;
+                width: 100%;
+                min-height: auto;
+            }
+            .content {
+                margin-left: 0;
+                width: 100%;
+                padding: 20px;
+            }
+            .works-grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-   
-   <!-- サイドバー -->
-    <div class="sidebar">
-        <h1> 石森 虹大</h1>
+
+    <!-- サイドバーナビゲーション -->
+    <aside class="sidebar">
+        <h1>石森 虹大</h1>
         <div class="subtitle">ゲームプログラマー</div>
-        <ul>
-            <li><a href="#about">自己紹介</a></li>
-            <li><a href="#skills">スキル</a></li>
-            <li><a href="#works">制作作品</a></li>
-            <li><a href="#history">経歴</a></li>
-        </ul>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#skills">スキル</a></li>
+                <li><a href="#works">制作作品</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <!-- メインコンテンツ -->
-    <div class="content">
+    <main class="content">
 
         <!-- 自己紹介 -->
-     <section id="about">
+        <section id="about">
             <h2>自己紹介</h2>
             <p><strong>名前：</strong>石森 虹大</p>
             <p><strong>志望職種：</strong>ゲームプログラマー</p>
@@ -291,97 +235,95 @@
         <!-- スキル -->
         <section id="skills">
             <h2>スキル</h2>
-              <p><strong>言語：</strong> C++</li>
-              <p><strong>開発環境・ツール：</strong> Visual Studio / Git / GitHub</li>
-              <p><strong>ゲームエンジン：</strong> Unreal Engine 5</li>
+            <ul class="skill-list">
+                <li><strong>言語：</strong> C / C++</li>
+                <li><strong>開発環境・ツール：</strong> Visual Studio / Git / GitHub</li>
+                <li><strong>ゲームエンジン：</strong> Unreal Engine 5</li>
+            </ul>
         </section>
 
-   <!-- 作品紹介 -->
-<section id="works">
-    <h2>ゲーム製作作品</h2>
-    
-    <div class="works-grid">
-        <!-- 作品1：ゴエポン -->
-        <div class="work-card">
-            <img src="game1.png" alt="あぶないっ！ゴエポン！～お宝奪還伝～">
+        <!-- 制作作品 -->
+        <section id="works">
+            <h2>ゲーム制作作品</h2>
             
-            <div class="work-season">冬季制作</div>
-            <div class="work-title">あぶないっ！ゴエポン！～お宝奪還伝～</div>
-            
-            <div class="work-info-group">
-                <span class="work-info-label">ゲームジャンル</span>
-                <p class="work-info-value">3D変化ステルスアクションゲーム</p>
-            </div>
+            <div class="works-grid">
+                <!-- 作品1：ゴエポン -->
+                <article class="work-card">
+                    <img src="game1.png" alt="あぶないっ！ゴエポン！～お宝奪還伝～ メイン画面">
+                    
+                    <div class="work-season">冬季制作</div>
+                    <h3 class="work-title">あぶないっ！ゴエポン！～お宝奪還伝～</h3>
+                    
+                    <div class="work-info-group">
+                        <span class="work-info-label">ゲームジャンル</span>
+                        <p class="work-info-value">3D変化ステルスアクションゲーム</p>
+                    </div>
 
-            <div class="work-info-group">
-                <span class="work-info-label">製作期間</span>
-                <p class="work-info-value">約3ヵ月 (2025/11/28～2026/3/23)</p>
-            </div>
+                    <div class="work-info-group">
+                        <span class="work-info-label">制作期間</span>
+                        <p class="work-info-value">約3ヵ月 (2025/11/28～2026/3/23)</p>
+                    </div>
 
-            <div class="work-info-group">
-                <span class="work-info-label">制作人数</span>
-                <p class="work-info-value">11名（プランナー2名、プログラマー3名、デザイナー6名）</p>
-            </div>
+                    <div class="work-info-group">
+                        <span class="work-info-label">制作人数</span>
+                        <p class="work-info-value">11名（プランナー2名、プログラマー3名、デザイナー6名）</p>
+                    </div>
 
-            <div class="work-info-group">
-                <span class="work-info-label">担当箇所</span>
-                <p class="work-info-value">演出プログラミング・UI制御・ゲームループ実装・シナリオ実装・ギミックの実装</p>
-            </div>
+                    <div class="work-info-group">
+                        <span class="work-info-label">担当箇所</span>
+                        <p class="work-info-value">演出プログラミング・UI制御・ゲームループ実装・シナリオ実装・ギミックの実装</p>
+                    </div>
 
-            <div class="work-info-group">
-                <span class="work-info-label">開発環境</span>
-                <p class="work-info-value">C/C++、Python、Visual Studio、DXライブラリ</p>
-            </div>
+                    <div class="work-info-group">
+                        <span class="work-info-label">開発環境</span>
+                        <p class="work-info-value">C/C++、Python、Visual Studio、DXライブラリ</p>
+                    </div>
 
-            <div style="margin-top: 20px;">
-                <a href="goepon.html" class="btn">詳細を見る</a>
-            </div>
-        </div>
+                    <div class="work-action">
+                        <a href="goepon.html" class="btn">詳細を見る</a>
+                    </div>
+                </article>
 
-        <!-- 作品2： -->
-        <div class="work-card">
-            <img src="Ransekenbunki.png" alt="乱世見聞記">
-            
-            <div class="work-season">夏季制作</div>
-            <div class="work-title">乱世見聞記</div>
-            
-            <div class="work-info-group">
-                <span class="work-info-label">ゲームジャンル</span>
-                <p class="work-info-value">２Ｄステルスアクション</p>
-            </div>
+                <!-- 作品2：乱世見聞記 -->
+                <article class="work-card">
+                    <img src="Ransekenbunki.png" alt="乱世見聞記 メイン画面">
+                    
+                    <div class="work-season">夏季制作</div>
+                    <h3 class="work-title">乱世見聞記</h3>
+                    
+                    <div class="work-info-group">
+                        <span class="work-info-label">ゲームジャンル</span>
+                        <p class="work-info-value">2Dステルスアクション</p>
+                    </div>
 
-            <div class="work-info-group">
-                <span class="work-info-label">製作期間</span>
-                <p class="work-info-value">約3ヵ月 (2025/7/22～2025/10/1)</p>
-            </div>
+                    <div class="work-info-group">
+                        <span class="work-info-label">制作期間</span>
+                        <p class="work-info-value">約3ヵ月 (2025/7/22～2025/10/1)</p>
+                    </div>
 
-            <div class="work-info-group">
-                <span class="work-info-label">制作人数</span>
-                <p class="work-info-value">10名（プランナー2名、プログラマー1名、デザイナー7名）</p>
-            </div>
+                    <div class="work-info-group">
+                        <span class="work-info-label">制作人数</span>
+                        <p class="work-info-value">10名（プランナー2名、プログラマー1名、デザイナー7名）</p>
+                    </div>
 
-            <div class="work-info-group">
-                <span class="work-info-label">担当箇所</span>
-                <p class="work-info-value">キャラクター挙動、ゲームシステム・当たり判定、アニメーション管理、画面遷移、演出処理</p>
-            </div>
+                    <div class="work-info-group">
+                        <span class="work-info-label">担当箇所</span>
+                        <p class="work-info-value">キャラクター挙動、ゲームシステム・当たり判定、アニメーション管理、画面遷移、演出処理</p>
+                    </div>
 
-            <div class="work-info-group">
-                <span class="work-info-label">開発環境</span>
-                <p class="work-info-value">C/C++、Visual Studio、DXライブラリ</p>
-            </div>
+                    <div class="work-info-group">
+                        <span class="work-info-label">開発環境</span>
+                        <p class="work-info-value">C/C++、Visual Studio、DXライブラリ</p>
+                    </div>
 
-            <div style="margin-top: 20px;">
-                <a href="ranse.html" class="btn">詳細を見る</a>
+                    <div class="work-action">
+                        <a href="ranse.html" class="btn">詳細を見る</a>
+                    </div>
+                </article>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+
+    </main>
 
 </body>
 </html>
-
-
-
-
-
-   
