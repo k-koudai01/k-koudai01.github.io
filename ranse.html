@@ -190,6 +190,30 @@
             display: block;
         }
 
+        <--アピール：tilled-->
+        .tiled-image-container 
+        {
+            display: flex;
+            flex-direction: column; /* 縦並びにする */
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .tiled-item 
+        {
+            width: 100%;
+            text-align: center;
+        }
+
+        .tiled-img 
+        {
+            width: 100%;
+            max-width: 700px;        /* 大きく見せる */
+            height: auto;            /* トリミングせず全体を表示 */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
         .appeal-gif 
         {
             max-width: 600px;        /* 幅の最大値を制限 */
@@ -301,14 +325,14 @@
 
             <h3>3.Tiledを活用したレベルデザイン</h3>
             
-            <div class="gimmick-gifcontainer">
-            <div class="gif-item">
-                <img src="tiled_ranse.png" alt="Tiledの設定画面" class="gimmick-img">
-                <p class="gif-caption">Tiledでの設定画面</p>
+            <div class="tiled-image-container">
+            <div class="tiled-item">
+                <img src="tiled_ranse.png" alt="Tiledでの設定画面" class="tiled-img">
+                <p class="gif-caption">① Tiledでの設定画面（パラメータ・イベントボックス配置）</p>
             </div>
-            <div class="gif-item">
-                <img src="game_ranse.png" alt="実際のゲーム画像" class="gimmick-img">
-                <p class="gif-caption">実際のゲーム画面</p>
+            <div class="tiled-item">
+                <img src="game_ranse.png" alt="実際のゲーム画面" class="tiled-img">
+                <p class="gif-caption">② 実際のゲーム画面（JSONロードによる配置の再現）</p>
             </div>
         </div>
             
