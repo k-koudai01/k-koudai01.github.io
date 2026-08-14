@@ -5,90 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>乱世見聞記 - 詳細</title>
     <style>
-        body
-        {
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
             margin: 0;
             padding: 40px 20px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color #333;
+            color: #333;
             background-color: #f9f9f9;
         }
 
-        .container
-        {
+        .container {
             max-width: 800px;
             margin: 0 auto;
             background: #ffffff;
-            padding: 30px;
+            padding: 40px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            
         }
 
-        .main-title
-        {
-            font-size: 35px;
-            color: #1a252f;
-            border-bottom: 3px solid #00d1b2;
-            padding-bottom 8px;
-            margin-top: 20px;
-        }
-
-        .appeal-main-title
-        {
-            font-size 35px;
+        .main-title {
+            font-size: 32px;
             color: #1a252f;
             border-bottom: 3px solid #00d1b2;
             padding-bottom: 8px;
-            margin-top: 100px;
+            margin-top: 20px;
+        }
+
+        .section-title {
+            font-size: 26px;
+            color: #1a252f;
+            border-bottom: 3px solid #00d1b2;
+            padding-bottom: 8px;
+            margin-top: 60px;
             margin-bottom: 25px;
         }
 
-        h2
-        {
-           font-size: 30px;
-           color: #2c3e50;
-        　　margin-top: 30px;
-        　　margin-bottom: 15px;
-        　　width: fit-content;
-        　　border-left: 6px solid #00d1b2;
-        　　padding-left: 14px;
-        　　border-bottom: 2px solid #ccc;
-        　　padding-bottom: 10px;
+        h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            width: fit-content;
+            border-left: 6px solid #00d1b2;
+            padding-left: 14px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 6px;
         }
 
-        h3
-        {
-            font-size: 21px;
+        h3 {
+            font-size: 20px;
             color: #333333;
-            margin-top: 45px;
+            margin-top: 35px;
             margin-bottom: 10px;
             font-weight: bold;
         }
 
-        p
-        {
+        p {
             font-size: 16px;
             line-height: 1.7;
             color: #444444;
-            margin-right: 10px;
-            
+            margin-bottom: 10px;
         }
 
-        .tech-tag
-        {
+        ul {
+            line-height: 1.8;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
             display: inline-block;
             background: #eef9f6;
             color: #009688;
-            padding: 3px 8px;
+            padding: 4px 10px;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: bold;
-            margin-right: 5px;
+            margin-right: 6px;
+            margin-top: 5px;
         }
 
-        .btn
-        {
+        .btn {
             display: inline-block;
             padding: 8px 16px;
             background-color: #1a252f;
@@ -96,176 +96,83 @@
             text-decoration: none;
             border-radius: 4px;
             font-size: 14px;
-            margin-right: 15px;
+            margin-right: 10px;
             margin-top: 10px;
-            transition: 0.2s;
+            transition: background-color 0.2s;
         }
 
-        .btn:hover
-        {
+        .btn:hover {
             background-color: #00d1b2;
         }
 
-        .back-btn
-        {
+        .back-btn {
             background-color: #7f8c8d; 
         }
 
-        .ui
-        {
-            line-height: 1.8px;
-        }
-
-         /* 動画を横並びにする親要素の設定 */
-        .gifcontainer
-        {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
-            max-width: 100%;       /* 親要素の中に収める */
-            margin: 20px 0 35px 0;
-        }
-
-        /* 1つ1つの動画アイテム枠 */
-        .gif-item 
-        {
-            flex: 1;
-            min-width: 200px;      /* スマホ等で崩れない最小幅 */
-            max-width: 300px;      /* ここで1つあたりの「動画の大きさ」を調整できます */
-            text-align: center;
-        }
-
-        /* 動画自体のサイズ設定 */
-        .gif-item video 
-        {
-            width: 100%;           /* 枠いっぱいに広げる */
+        .header-img {
+            width: 100%;
+            max-width: 600px;
             height: auto;
+            border-radius: 6px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .appeal-gif {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .gif-caption 
-        {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 8px;
-            color: #555;
-        }
-
-        /* ギミックセクション専用の動画コンテナ */
-        .gimmick-gifcontainer
-        {
-            display: flex !important;
-            flex-direction: row !important;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 32px;                /* 動画と動画の間隔*/
-            margin: 20px 0;           /* 上下の余白 */
-            width: 100%;
-        　　box-sizing: border-box;
-        }
-
-        /* ギミックの動画サイズを少し大きく調整 */
-        .gimmick-gifcontainer .gif-item
-        {
-            flex: 1;             /* 均等に配置 */
-            max-width: 48%;    /* 動画の最大横幅*/
-            text-align: center;
-        }
-
-        .gimmick-img 
-        {
-            width: 100%;
-            height: auto;
-            border-radius: 12px; 
-            display: block;
-        }
-        
-        .gimmick-gifcontainer video 
-        {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;  /* 角丸の引き継ぎ */
-            display: block;
-        }
-
-        /* アピール：tiled */
-        .tiled-image-container 
-        {
+        .tiled-grid {
             display: flex;
-            flex-direction: row;       
-            justify-content: space-between;
             gap: 16px;                 
             margin: 20px 0;
             width: 100%;
         }
 
-        .tiled-item 
-        {
+        .tiled-item {
             flex: 1;
-            max-width: 49%;
+            max-width: 50%;
             text-align: center;
+            margin: 0;
         }
 
-        .tiled-img 
-        {
-            width: 100%;                 /* 枠いっぱいに広げる */
-            height: auto;                /* 縦横比を維持（文字が潰れるのを防ぐ） */
-            border-radius: 8px;          /* 角丸 */
+        .tiled-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             display: block;
         }
-        
-        .appeal-gif 
-        {
-            max-width: 600px;        /* 幅の最大値を制限 */
-            width: 100%;             /* 画面が狭い時は自動で縮小 */
-            height: auto;            /* 縦横比を維持 */
-            display: block;          /* 中央揃え用 */
-            margin: 20px auto;       /* 上下に20pxの余白を作り、左右中央に配置 */
-            border-radius: 8px;      /* 角を少し丸くして見た目を綺麗に */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* うっすら影をつけて浮き上がらせる */
-        }
 
-        .appeal-section
-        {
-            margin-top: 50px;        /* 作品リンクとの間に50pxのスペースを作る */
+        .caption {
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 8px;
+            color: #555;
         }
-
-        /* ポートフォリオ画像の基本スタイル */
-        .portfolio-img
-        {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            display: block;
-        }
-
-        /* 画像を囲む枠の調整（中央寄せや余白） */
-        .image-container 
-        {
-            margin: 15px 0;
-            text-align: center;
-        }
-        
     </style>    
 </head>
     
 <body>
-    <div class="container">
+    <main class="container">
         <!-- 戻るボタン -->
         <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
         <h1 class="main-title">乱世見聞記</h1>
-        <img src="Ransekenbunki.png" alt="作品画像" style="width: 100%; max-width: 600px; height: auto; border-radius: 6px; margin: 15px 0;">
+        <img src="Ransekenbunki.png" alt="乱世見聞記 メイン画像" class="header-img">
 
-         <div>
+        <div>
             <span class="tech-tag">C/C++</span>
             <span class="tech-tag">Visual Studio</span>
             <span class="tech-tag">チーム開発</span>
         </div>
 
-        <section style="margin-top: 20px;">
+        <section style="margin-top: 30px;">
             <h2>担当箇所</h2>
             <p>
                 <strong>プログラム全般</strong><br>
@@ -273,110 +180,102 @@
             </p>
         </section>
         
-<!-- 作品リンク -->
+        <!-- 作品リンク -->
         <section>
             <h2>作品リンク</h2>
             <div class="link-buttons">
-                <a href="https://github.com/k-koudai01/ranse-kenbunki.git" class="btn" target="_blank">GitHubソースコードを見る</a>
-                <a href="https://drive.google.com/file/d/1IQKEBDAPsy4939oy8BlkQpQqS7lspllu/view?usp=sharing" class="btn" target="_blank">実演動画を見る</a>
+                <a href="https://github.com/k-koudai01/ranse-kenbunki.git" class="btn" target="_blank" rel="noopener">GitHubソースコードを見る</a>
+                <a href="https://drive.google.com/file/d/1IQKEBDAPsy4939oy8BlkQpQqS7lspllu/view?usp=sharing" class="btn" target="_blank" rel="noopener">実演動画を見る</a>
             </div>
         </section>
 
-<!-- アピール箇所全体 -->
+        <!-- アピール箇所全体 -->
         <section>
-        <h1 class="appeal-main-title">アピール箇所</h1>
+            <h2 class="section-title">アピール箇所</h2>
 
-        <!-- 【分岐1】担当箇所 -->
-        <div class="appeal-card">
-            <h2>頑張った・こだわった箇所</h2>
+            <article class="appeal-card">
+                <h2>頑張った・こだわった箇所</h2>
 
-            
-            <h3>1.敵AI</h3>
-            <img src="Enemy_AI.gif" alt="敵AI" class="appeal-gif">
-            <ui>
-                <li>
-                    <strong>A*アルゴリズムを用いた最短距離探索</strong>
-                    <p>
-                        障害物を回避して最短距離でプレイヤーを追跡する処理を実装しました。
-                        当時「最短距離探索」はまだ習っておらず、理想の敵AIを実現するために講師の方へ相談し、アドバイスをもとに実装しました。<br>
-                        プレイヤーを動くゴールとし、当たり判定があるマップチップの判定調整を重ねることで、スムーズな追跡処理を完成することができました。
-                    </p>   
-                </li>  
-                <li>
-                    <strong>全体警戒システム</strong>
-                    <p>当初は「発見した敵のみが追従する」仕様でしたが、ステルスゲームとしての緊張感を高めるため、自身でアイデアを提案・実装しました。一匹でもプレイヤーを発見すると、画面内の全敵へ即座に警戒状態が共有され、一斉に追跡を開始する仕組みへ昇華させました。</p>
-                </li>
-            </ui>
+                <h3>1. 敵AI</h3>
+                <img src="Enemy_AI.gif" alt="敵AIの動き" class="appeal-gif">
+                <ul>
+                    <li>
+                        <strong>A*アルゴリズムを用いた最短距離探索</strong>
+                        <p>
+                            障害物を回避して最短距離でプレイヤーを追跡する処理を実装しました。
+                            当時「最短距離探索」はまだ習っておらず、理想の敵AIを実現するために講師の方へ相談し、アドバイスをもとに実装しました。<br>
+                            プレイヤーを動くゴールとし、当たり判定があるマップチップの判定調整を重ねることで、スムーズな追跡処理を完成することができました。
+                        </p>   
+                    </li>  
+                    <li>
+                        <strong>全体警戒システム</strong>
+                        <p>当初は「発見した敵のみが追従する」仕様でしたが、ステルスゲームとしての緊張感を高めるため、自身でアイデアを提案・実装しました。一匹でもプレイヤーを発見すると、画面内の全敵へ即座に警戒状態が共有され、一斉に追跡を開始する仕組みへ昇華させました。</p>
+                    </li>
+                </ul>
 
-            
-            <h3>2.タイトル画面</h3>
-            <img src="ranse_Title.gif" alt="タイトル" class="appeal-gif">
-            <ui>
-                <li>
-                    <strong>桜のパーティクルエフェクト</strong>
-                    <p>
-                        当初の仕様にはありませんでしたが、和風ゲームとしての世界観やクオリティを向上させるため、桜が舞う演出を追加実装しました。<br>
-                        1000枚の花びらをスムーズに描画できるようオブジェクトプールを利用し、メモリ負荷を抑えつつ乱数処理によって風や揺らぎのある自然な舞い落ち方を表現しました。
-                        
-                    </p>   
-                </li>
-                <li>
-                    <strong>タイトルコールのランダム再生システム</strong>
-                    <p>
-                        タイトル画面への遷移時に、複数のボイスから1つを選出して再生する処理を実装しました。<br>
-                        作品の世界観やキャラクターの魅力を引き立てると同時に、タイトル遷移時の音声リソースの読み込みと解放を安全に行う設計にこだわりました。
-                    </p>
-                </li>
-            </ui>    
+                <h3>2. タイトル画面</h3>
+                <img src="ranse_Title.gif" alt="タイトル演出" class="appeal-gif">
+                <ul>
+                    <li>
+                        <strong>桜のパーティクルエフェクト</strong>
+                        <p>
+                            当初の仕様にはありませんでしたが、和風ゲームとしての世界観やクオリティを向上させるため、桜が舞う演出を追加実装しました。<br>
+                            1000枚の花びらをスムーズに描画できるようオブジェクトプールを利用し、メモリ負荷を抑えつつ乱数処理によって風や揺らぎのある自然な舞い落ち方を表現しました。
+                        </p>   
+                    </li>
+                    <li>
+                        <strong>タイトルコールのランダム再生システム</strong>
+                        <p>
+                            タイトル画面への遷移時に、複数のボイスから1つを選出して再生する処理を実装しました。<br>
+                            作品の世界観やキャラクターの魅力を引き立てると同時に、タイトル遷移時の音声リソースの読み込みと解放を安全に行う設計にこだわりました。
+                        </p>
+                    </li>
+                </ul>    
 
-            
-            <h3>3.Tiledを活用したレベルデザイン</h3>
-            
-            <div class="tiled-image-container">
-            <div class="tiled-item">
-                <img src="tiled_ranse.png" alt="Tiledでの設定画面" class="tiled-img">
-                <p class="gif-caption">Tiledでの設定画面</p>
-            </div>
-            <div class="tiled-item">
-                <img src="game_ranse.png" alt="実際のゲーム画面" class="tiled-img">
-                <p class="gif-caption">実際のゲーム画面</p>
-            </div>
-        </div>
-            
-            <ui>  
-                <li>
-                    <strong>ステージごとの見た目・配置制御</strong>
-                    <p>プレイヤーのタイプやオブジェクト初期位置をTiledで指定することで、ステージ設計をプランナーの方でもできる仕組みを構築しました。</p>
-                </li>
-                <li>
-                <strong>イベントボックス</strong>
-                    <p>特定エリアへの進入でシナリオや会話イベントが発生する「イベントボックス」を構築しました。Tiled上で領域の大きさや位置を配置・調整できるようにしました。</p>
-                </li>
-            </ui>
-
-            
-            <h3>4.マップチップ</h3>
-            <p><st>
-            <img src="ranse_Sneeku.gif" alt="隠れマップチップ" class="appeal-gif">
-            <ui>
-                 <li>
-                    <strong>ギミック</strong>
-                    <p>マップチップの判定を利用し、プレイヤーが水や影などの特定の場所で敵の視界から身を隠す「隠れアクション」を実装しました。</p>
-                </li>
+                <h3>3. Tiledを活用したレベルデザイン</h3>
+                <div class="tiled-grid">
+                    <figure class="tiled-item">
+                        <img src="tiled_ranse.png" alt="Tiledでの設定画面" class="tiled-img">
+                        <figcaption class="caption">Tiledでの設定画面</figcaption>
+                    </figure>
+                    <figure class="tiled-item">
+                        <img src="game_ranse.png" alt="実際のゲーム画面" class="tiled-img">
+                        <figcaption class="caption">実際のゲーム画面</figcaption>
+                    </figure>
+                </div>
                 
-                <li>
-                    <strong>高い拡張性の確保</strong>
-                    <p>
-                        新しいギミックを追加する際にも、既存の処理を書き換えることなく新しいタイプIDと判定を追加するだけで簡単に拡張できる設計にしました。
-                    </p>   
-                </li>  
-            </ui>
-         
+                <ul>  
+                    <li>
+                        <strong>ステージごとの見た目・配置制御</strong>
+                        <p>プレイヤーのタイプやオブジェクト初期位置をTiledで指定することで、ステージ設計をプランナーの方でもできる仕組みを構築しました。</p>
+                    </li>
+                    <li>
+                        <strong>イベントボックス</strong>
+                        <p>特定エリアへの進入でシナリオや会話イベントが発生する「イベントボックス」を構築しました。Tiled上で領域の大きさや位置を配置・調整できるようにしました。</p>
+                    </li>
+                </ul>
+
+                <h3>4. マップチップを活用したギミック制御</h3>
+                <img src="ranse_Sneeku.gif" alt="隠れマップチップ" class="appeal-gif">
+                <ul>
+                    <li>
+                        <strong>ギミック</strong>
+                        <p>マップチップの判定を利用し、プレイヤーが水や影などの特定の場所で敵の視界から身を隠す「隠れアクション」を実装しました。</p>
+                    </li>
+                    <li>
+                        <strong>高い拡張性の確保</strong>
+                        <p>
+                            新しいギミックを追加する際にも、既存の処理を書き換えることなく新しいタイプIDと判定を追加するだけで簡単に拡張できる設計にしました。
+                        </p>   
+                    </li>  
+                </ul>
+            </article>
+
         </section>    
 
         <div style="margin-top: 40px;">
             <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
         </div>
-    </div>    
+    </main>    
 </body>
 </html>
