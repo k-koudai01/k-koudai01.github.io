@@ -201,17 +201,18 @@
 
         .tiled-item 
         {
-            width: 100%;
+            flex: 1;
+            min-width: 200px;      /* スマホ等で崩れない最小幅 */
+            max-width: 300px;      /* ここで1つあたりの「動画の大きさ」を調整できます */
             text-align: center;
         }
 
         .tiled-img 
         {
             width: 100%;
-            max-width: 700px;        /* 大きく見せる */
-            height: auto;            /* トリミングせず全体を表示 */
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: auto;
+            border-radius: 12px; 
+            display: block;
         }
         
         .appeal-gif 
