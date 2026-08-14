@@ -193,12 +193,14 @@
         <--アピール：tilled-->
         .tiled-image-container 
         {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
+            display: flex !important;
+            flex-direction: row !important;
             justify-content: center;
-            max-width: 100%;       /* 親要素の中に収める */
-            margin: 20px 0 35px 0;
+            align-items: flex-start;
+            gap: 32px;                
+            margin: 20px 0;        
+            width: 100%;
+        　　box-sizing: border-box;
         }
 
         .tiled-item 
