@@ -4,165 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>乱世見聞記 - 詳細</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 40px 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .main-title {
-            font-size: 32px;
-            color: #1a252f;
-            border-bottom: 3px solid #00d1b2;
-            padding-bottom: 8px;
-            margin-top: 20px;
-        }
-
-        .section-title {
-            font-size: 26px;
-            color: #1a252f;
-            border-bottom: 3px solid #00d1b2;
-            padding-bottom: 8px;
-            margin-top: 60px;
-            margin-bottom: 25px;
-        }
-
-        h2 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            width: fit-content;
-            border-left: 6px solid #00d1b2;
-            padding-left: 14px;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 6px;
-        }
-
-        h3 {
-            font-size: 20px;
-            color: #333333;
-            margin-top: 35px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444444;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            line-height: 1.8;
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .tech-tag {
-            display: inline-block;
-            background: #eef9f6;
-            color: #009688;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 13px;
-            font-weight: bold;
-            margin-right: 6px;
-            margin-top: 5px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #1a252f;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 14px;
-            margin-right: 10px;
-            margin-top: 10px;
-            transition: background-color 0.2s;
-        }
-
-        .btn:hover {
-            background-color: #00d1b2;
-        }
-
-        .back-btn {
-            background-color: #7f8c8d; 
-        }
-
-        .header-img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 6px;
-            margin: 20px auto;
-            display: block;
-        }
-
-        .appeal-gif {
-            max-width: 600px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .tiled-grid {
-            display: flex;
-            gap: 16px;                 
-            margin: 20px 0;
-            width: 100%;
-        }
-
-        .tiled-item {
-            flex: 1;
-            max-width: 50%;
-            text-align: center;
-            margin: 0;
-        }
-
-        .tiled-img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            display: block;
-        }
-
-        .caption {
-            font-size: 15px;
-            font-weight: bold;
-            margin-top: 8px;
-            color: #555;
-        }
-    </style>    
+    <!-- 外部CSSの読み込み -->
+    <link rel="stylesheet" href="style.css">
 </head>
-    
-<body>
+<body style="padding: 40px 20px;">
     <main class="container">
-        <!-- 戻るボタン -->
         <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
+        
         <h1 class="main-title">乱世見聞記</h1>
         <img src="Ransekenbunki.png" alt="乱世見聞記 メイン画像" class="header-img">
 
@@ -173,30 +21,28 @@
         </div>
 
         <section style="margin-top: 30px;">
-            <h2>担当箇所</h2>
+            <h2 class="detail-h2">担当箇所</h2>
             <p>
                 <strong>プログラム全般</strong><br>
                 この作品のゲームロジック、敵AI、当たり判定、画面遷移、演出・サウンド制御などプログラム全般を1人で全実装しました。
             </p>
         </section>
         
-        <!-- 作品リンク -->
         <section>
-            <h2>作品リンク</h2>
-            <div class="link-buttons">
+            <h2 class="detail-h2">作品リンク</h2>
+            <div>
                 <a href="https://github.com/k-koudai01/ranse-kenbunki.git" class="btn" target="_blank" rel="noopener">GitHubソースコードを見る</a>
                 <a href="https://drive.google.com/file/d/1IQKEBDAPsy4939oy8BlkQpQqS7lspllu/view?usp=sharing" class="btn" target="_blank" rel="noopener">実演動画を見る</a>
             </div>
         </section>
 
-        <!-- アピール箇所全体 -->
         <section>
             <h2 class="section-title">アピール箇所</h2>
 
-            <article class="appeal-card">
-                <h2>頑張った・こだわった箇所</h2>
+            <article>
+                <h2 class="detail-h2">頑張った・こだわった箇所</h2>
 
-                <h3>1. 敵AI</h3>
+                <h3 class="detail-h3">1. 敵AI</h3>
                 <img src="Enemy_AI.gif" alt="敵AIの動き" class="appeal-gif">
                 <ul>
                     <li>
@@ -213,7 +59,7 @@
                     </li>
                 </ul>
 
-                <h3>2. タイトル画面</h3>
+                <h3 class="detail-h3">2. タイトル画面</h3>
                 <img src="ranse_Title.gif" alt="タイトル演出" class="appeal-gif">
                 <ul>
                     <li>
@@ -232,15 +78,15 @@
                     </li>
                 </ul>    
 
-                <h3>3. Tiledを活用したレベルデザイン</h3>
-                <div class="tiled-grid">
-                    <figure class="tiled-item">
-                        <img src="tiled_ranse.png" alt="Tiledでの設定画面" class="tiled-img">
-                        <figcaption class="caption">Tiledでの設定画面</figcaption>
+                <h3 class="detail-h3">3. Tiledを活用したレベルデザイン</h3>
+                <div class="two-column-grid">
+                    <figure class="media-item">
+                        <img src="tiled_ranse.png" alt="Tiledでの設定画面">
+                        <figcaption class="media-caption">Tiledでの設定画面</figcaption>
                     </figure>
-                    <figure class="tiled-item">
-                        <img src="game_ranse.png" alt="実際のゲーム画面" class="tiled-img">
-                        <figcaption class="caption">実際のゲーム画面</figcaption>
+                    <figure class="media-item">
+                        <img src="game_ranse.png" alt="実際のゲーム画面">
+                        <figcaption class="media-caption">実際のゲーム画面</figcaption>
                     </figure>
                 </div>
                 
@@ -255,7 +101,7 @@
                     </li>
                 </ul>
 
-                <h3>4. マップチップを活用したギミック制御</h3>
+                <h3 class="detail-h3">4. マップチップを活用したギミック制御</h3>
                 <img src="ranse_Sneeku.gif" alt="隠れマップチップ" class="appeal-gif">
                 <ul>
                     <li>
