@@ -4,206 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>石森虹大 - ポートフォリオ</title>
-    <style>
-        /* === 基本スタイル === */
-        *{
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-
-        /* === サイドバー === */
-        .sidebar {
-            width: 260px;
-            background-color: #1a252f;
-            color: #ffffff;
-            min-height: 100vh;
-            padding: 30px 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        .sidebar h1 {
-            font-size: 32px;
-            font-weight: bold;
-            text-align: center;
-            margin: 10px 0 8px 0;
-            letter-spacing: 2px;
-        }
-
-        .sidebar .subtitle {
-            font-size: 16px;
-            color: #00d1b2;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .sidebar nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .sidebar nav li {
-            margin-bottom: 15px;
-        }
-
-        .sidebar nav a {
-            color: #ecf0f1;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            font-size: 18px;
-            padding: 12px 16px;
-            border-radius: 4px;
-            transition: background-color 0.2s, color 0.2s;
-        }
-
-        .sidebar nav a:hover {
-            background-color: #2c3e50;
-            color: #00d1b2;
-        }
-
-        /* === メインコンテンツエリア === */
-        .content {
-            margin-left: 260px;
-            width: calc(100% - 260px);
-            max-width: 1200px;
-            padding: 50px;
-        }
-
-        section {
-            background: #ffffff;
-            padding: 40px 50px;
-            margin-bottom: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
-
-        h2 {
-            font-size: 28px;
-            color: #1a252f;
-            border-bottom: 3px solid #00d1b2;
-            padding-bottom: 8px;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        /* === スキルリスト === */
-        .skill-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            line-height: 2;
-        }
-
-        /* === 共通ボタン === */
-        .btn {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #1a252f;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 14px;
-            transition: background-color 0.2s;
-        }
-
-        .btn:hover {
-            background-color: #00d1b2;
-        }
-
-        /* === 制作作品レイアウト === */
-        .works-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .work-card {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 0;
-        }
-
-        .work-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            display: block;
-            margin: 0 auto 16px auto;
-        }
-
-        .work-season {
-            font-size: 16px;
-            font-weight: bold;
-            color: #444;
-            margin-bottom: 8px;
-        }
-
-        .work-title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #1a252f;
-            margin-bottom: 20px;
-            min-height: 28px;
-        }
-
-        .work-info-group {
-            margin-bottom: 16px;
-        }
-
-        .work-info-label {
-            font-weight: bold;
-            font-size: 15px;
-            color: #333;
-            display: block;
-            margin-bottom: 2px;
-        }
-
-        .work-info-value {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        .work-action {
-            margin-top: 20px;
-        }
-
-        /* === Responsive (スマホ対応) === */
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-            .sidebar {
-                position: relative;
-                width: 100%;
-                min-height: auto;
-            }
-            .content {
-                margin-left: 0;
-                width: 100%;
-                padding: 20px;
-            }
-            .works-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+　  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="site-body">
 
     <!-- サイドバーナビゲーション -->
     <aside class="sidebar">
@@ -279,7 +82,7 @@
                         <p class="work-info-value">C/C++、Python、Visual Studio、DXライブラリ</p>
                     </div>
 
-                    <div class="work-action">
+                    <div style="margin-top: 20px;">
                         <a href="goepon.html" class="btn">詳細を見る</a>
                     </div>
                 </article>
@@ -316,7 +119,7 @@
                         <p class="work-info-value">C/C++、Visual Studio、DXライブラリ</p>
                     </div>
 
-                    <div class="work-action">
+                    <div style="margin-top: 20px;">
                         <a href="ranse.html" class="btn">詳細を見る</a>
                     </div>
                 </article>
