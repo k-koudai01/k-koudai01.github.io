@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>石森虹大 - ポートフォリオ</title>
-　  <link rel="stylesheet" href="style.css">
+    <!-- 外部CSSの読み込み -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="site-body">
 
-    <!-- サイドバーナビゲーション -->
+    <!-- サイドバー -->
     <aside class="sidebar">
         <h1>石森 虹大</h1>
         <div class="subtitle">ゲームプログラマー</div>
@@ -21,11 +22,11 @@
         </nav>
     </aside>
 
-    <!-- メインコンテンツ -->
-    <main class="content">
+    <!-- メインエリア -->
+    <main class="top-content">
 
         <!-- 自己紹介 -->
-        <section id="about">
+        <section id="about" class="top-section">
             <h2>自己紹介</h2>
             <p><strong>名前：</strong>石森 虹大</p>
             <p><strong>志望職種：</strong>ゲームプログラマー</p>
@@ -36,7 +37,7 @@
         </section>
 
         <!-- スキル -->
-        <section id="skills">
+        <section id="skills" class="top-section">
             <h2>スキル</h2>
             <ul class="skill-list">
                 <li><strong>言語：</strong> C / C++</li>
@@ -45,15 +46,14 @@
             </ul>
         </section>
 
-        <!-- 制作作品 -->
-        <section id="works">
+        <!-- 作品紹介 -->
+        <section id="works" class="top-section">
             <h2>ゲーム制作作品</h2>
             
             <div class="works-grid">
-                <!-- 作品1：ゴエポン -->
+                <!-- ゴエポン -->
                 <article class="work-card">
-                    <img src="game1.png" alt="あぶないっ！ゴエポン！～お宝奪還伝～ メイン画面">
-                    
+                    <img src="game1.png" alt="あぶないっ！ゴエポン！～お宝奪還伝～">
                     <div class="work-season">冬季制作</div>
                     <h3 class="work-title">あぶないっ！ゴエポン！～お宝奪還伝～</h3>
                     
@@ -61,22 +61,18 @@
                         <span class="work-info-label">ゲームジャンル</span>
                         <p class="work-info-value">3D変化ステルスアクションゲーム</p>
                     </div>
-
                     <div class="work-info-group">
                         <span class="work-info-label">制作期間</span>
                         <p class="work-info-value">約3ヵ月 (2025/11/28～2026/3/23)</p>
                     </div>
-
                     <div class="work-info-group">
                         <span class="work-info-label">制作人数</span>
                         <p class="work-info-value">11名（プランナー2名、プログラマー3名、デザイナー6名）</p>
                     </div>
-
                     <div class="work-info-group">
                         <span class="work-info-label">担当箇所</span>
                         <p class="work-info-value">演出プログラミング・UI制御・ゲームループ実装・シナリオ実装・ギミックの実装</p>
                     </div>
-
                     <div class="work-info-group">
                         <span class="work-info-label">開発環境</span>
                         <p class="work-info-value">C/C++、Python、Visual Studio、DXライブラリ</p>
@@ -87,10 +83,9 @@
                     </div>
                 </article>
 
-                <!-- 作品2：乱世見聞記 -->
+                <!-- 乱世見聞記 -->
                 <article class="work-card">
-                    <img src="Ransekenbunki.png" alt="乱世見聞記 メイン画面">
-                    
+                    <img src="Ransekenbunki.png" alt="乱世見聞記">
                     <div class="work-season">夏季制作</div>
                     <h3 class="work-title">乱世見聞記</h3>
                     
@@ -98,22 +93,18 @@
                         <span class="work-info-label">ゲームジャンル</span>
                         <p class="work-info-value">2Dステルスアクション</p>
                     </div>
-
                     <div class="work-info-group">
                         <span class="work-info-label">制作期間</span>
                         <p class="work-info-value">約3ヵ月 (2025/7/22～2025/10/1)</p>
                     </div>
-
                     <div class="work-info-group">
                         <span class="work-info-label">制作人数</span>
                         <p class="work-info-value">10名（プランナー2名、プログラマー1名、デザイナー7名）</p>
                     </div>
-
                     <div class="work-info-group">
                         <span class="work-info-label">担当箇所</span>
                         <p class="work-info-value">キャラクター挙動、ゲームシステム・当たり判定、アニメーション管理、画面遷移、演出処理</p>
                     </div>
-
                     <div class="work-info-group">
                         <span class="work-info-label">開発環境</span>
                         <p class="work-info-value">C/C++、Visual Studio、DXライブラリ</p>
