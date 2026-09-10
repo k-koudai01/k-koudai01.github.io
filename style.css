@@ -67,7 +67,8 @@ ul {
 }
 
 /* 詳細ページの見出し */
-.main-title {
+.main-title 
+{
     font-size: 32px;
     color: #1a252f;
     border-bottom: 3px solid #00d1b2;
@@ -75,7 +76,8 @@ ul {
     margin-top: 20px;
 }
 
-.section-title {
+.section-title 
+{
     font-size: 26px;
     color: #1a252f;
     border-bottom: 3px solid #00d1b2;
@@ -84,7 +86,8 @@ ul {
     margin-bottom: 25px;
 }
 
-.detail-h2 {
+.detail-h2
+{
     font-size: 24px;
     color: #2c3e50;
     margin-top: 35px;
@@ -96,7 +99,8 @@ ul {
     padding-bottom: 6px;
 }
 
-.detail-h3 {
+.detail-h3
+{
     font-size: 20px;
     color: #333333;
     margin-top: 35px;
@@ -107,7 +111,8 @@ ul {
 /* ==========================================================================
    3. index.html（TOPページ）用レイアウト
    ========================================================================== */
-.site-body {
+.site-body
+{
     display: flex;
 }
 
@@ -323,16 +328,19 @@ ul {
     margin: 20px 0;
 }
 
-.two-column-grid .media-item {
+.two-column-grid .media-item
+{
     max-width: 48%;
 }
 
-.image-container {
+.image-container 
+{
     margin: 20px 0;
     text-align: center;
 }
 
-.portfolio-img {
+.portfolio-img 
+{
     max-width: 100%;
     height: auto;
     border-radius: 6px;
@@ -341,24 +349,30 @@ ul {
 /* ==========================================================================
    5. レスポンシブ対応 (スマホ表示)
    ========================================================================== */
-@media (max-width: 768px) {
-    .site-body {
+@media (max-width: 768px) 
+{
+    .site-body 
+    {
         flex-direction: column;
     }
-    .sidebar {
+    .sidebar
+    {
         position: relative;
         width: 100%;
         min-height: auto;
     }
-    .top-content {
+    .top-content 
+    {
         margin-left: 0;
         width: 100%;
         padding: 20px;
     }
-    .works-grid {
+    .works-grid 
+    {
         grid-template-columns: 1fr;
     }
-    .two-column-grid .media-item {
+    .two-column-grid .media-item
+    {
         max-width: 100%;
     }
 }
