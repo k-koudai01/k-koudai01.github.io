@@ -385,24 +385,24 @@ ul
 .about-container
 {
     display: flex;
-    flex-direction: row-reverse; /* ←画像を右側に配置 */
+    flex-direction: row-reverse; /* 画像を右に配置 */
     align-items: center; /* 垂直中央揃え */
-    justify-content: space-between;
-    gap: 30px; /* 画像とテキストの間隔 */
+    justify-content: flex-end; /* 全体を左寄せにしてテキストと写真を近づける */
+    gap: 100px; /* テキストと写真の間隔（ここでお好きな幅に調整できます） */
 }
 
 .about-image img
 {
-    width: 200px;        /* 幅を指定 */
-    height: auto;        /* 高さを自動にして元の比率を維持 */
+    width: 200px; /* 幅を指定 */
+    height: auto; /* 高さを自動にして元の比率を維持 */
     object-fit: contain; /* 画像の縦横比を一切崩さず全体を表示 */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;      /* 幅が小さく潰れるのを防止 */
+    flex-shrink: 0; /* 幅が小さく潰れるのを防止 */
 }
 
 .about-text
 {
-    flex: 1;
+    /* flex: 1; を削除（幅の自動拡張を解除） */
 }
 
 /* ==========================================================================
