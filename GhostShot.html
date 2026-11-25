@@ -1,0 +1,150 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoblinNaito - 詳細</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="detail-page" style="background-color: #f9f9f9;">
+    <main class="top-content" style="margin-left: 0; width: 100%; max-width: 900px; margin: 0 auto; padding: 40px 20px;">
+
+        <div class="top-section" style="text-align: left;">
+
+            <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
+            <h1 class="main-title">GhostShot - 詳細</h1>
+
+            <img src="res/GhostShot.png" alt="GhostShotメイン画像" class="header-img">
+
+            <div>
+                <span class="tech-tag">C/C++</span>
+                <span class="tech-tag">Visual Studio</span>
+                <span class="tech-tag">第一回：個人制作</span>
+            </div>
+
+            <!-- 作品リンク -->
+            <section>
+                <h2>プレイ動画</h2>
+                <div class="link-buttons">
+                    <a href="https://drive.google.com/drive/folders/1-WQJwoE37xFq8lxyh38OGTwMAe6GaiLv?usp=sharing" class="btn" target="_blank" rel="noopener">実演動画を見る</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="top-section" style="text-align: left;">
+            <!-- アピール箇所全体 -->
+            <section>
+                <h1 class="main-title">ゲーム内容</h1>
+                <p>
+                    プレイヤーを操作し、迫ってくる敵を倒し、時間内を耐えるアクションゲームです。
+                    <br>プレイヤーは、銃を構えてアクションボタンを押すと攻撃ができます。
+                    <br>敵は倒しても時間が経つとランダムで出現するので、敵を倒し続ける必要があります。
+                </p>
+            </section>
+
+            <!--<section>
+
+                <h1 class="main-title">アピールポイント</h1>
+                <div>
+                    <h2 class="detail-h2">プレイヤーシステム</h2>
+                    <p><strong>01. プレイヤーアクション</strong></p>
+                    <p>
+                        移動・ジャンプ・攻撃・チャージ攻撃・ダメージなど、プレイヤーの
+                        <br>基本操作から戦闘に関わるアクションまで実装しました。
+                    </p>
+                    <p><strong>02. 入力に応じた操作制御</strong></p>
+                    <p>
+                        カメラの向きを考慮した移動処理や、キーボード・アナログスティックへの対応など、
+                        <br>操作性を意識した入力処理を実装しました。
+                    </p>
+                    <p><strong>03. アニメーション・演出との連動</strong></p>
+                    <p>
+                        状態に応じたアニメーション切り替えや、攻撃判定のタイミング制御、
+                        <br>ダメージ時のカメラシェイクなどを実装しました。
+                    </p>
+
+                </div>
+
+                <div>
+                    <h2 class="detail-h2">敵システム</h2>
+                    <p><strong>01. Stateパターンを用いた敵AIの設計</strong></p>
+                    <p>
+                        敵の行動をStateごとにクラス分割し、待機・突進・遠距離攻撃などの
+                        <br>処理を独立して管理しています。
+                        <br>各行動の責務を明確にし、状態遷移によって敵の行動を制御しました。
+                    </p>
+                    <p><strong>02. 状況に応じた敵の行動制御</strong></p>
+                    <p>
+                        待機時間に応じて次の攻撃をランダムに選択する仕組みを実装しました。
+                        <br>ジャンプによる予備動作や突進攻撃、雑魚敵の償還など、複数の行動を組み合わせた
+                        <br>敵AIを実装しました。
+                    </p>
+                    <p><strong>03. Factoryパターンによる敵生成処理</strong></p>
+                    <p>
+                        敵の生成処理をFactoryに分離し、Spawnerによって生成位置や生成タイミングを管理。
+                        <br>ボスの召喚行動から敵を追加できる仕組みを実装しました。
+                    </p>
+                </div>
+
+
+                <div>
+                    <h2 class="detail-h2">3D空間を利用した当たり判定システム</h2>
+                    <p><strong>01. 複数の形状に対応した当たり判定</strong></p>
+                    <p>
+                        カプセル同士やカプセルとAABBなど、用途に応じた衝突判定を実装しました。
+                        <br>3D空間の座標を利用して、線分の間の距離や点との距離を計算しています。
+                        <br>AABBとの当たり判定は、初めてチャレンジしたので最初は苦戦をしたのですが、
+                        <br>プログラムの講師のアドバイスをもとに、実装することができました。
+                    </p>
+                    <p><strong>02. 衝突時の処理</strong></p>
+                    <p>
+                        壁との衝突時の押し戻しに加え、プレイヤーの攻撃の判定や敵との接触判定、
+                        <br>パリィ・弾の販社など、衝突結果に応じて処理を実装しました。
+                    </p>
+                    <p><strong>03. デバック機能</strong></p>
+                    <p>
+                        カプセル形状の当たり判定を可視化する機能を実装しました。
+                        <br>実際の判定範囲を確認しながら、位置やコリジョンのタイミングなどに役立てました。
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="detail-h2">パーティクルの実装</h2>
+                    <p><strong>01. パーティクルシステムの実装</strong></p>
+                    <p>
+                        パーティクルを管理するクラスを作成し、オブジェクトプールを利用した
+                        <br>葉っぱや桜のエフェクトを実装しました。
+                        <br>あらかじめ生成しておいたパーティクルを再利用することで、
+                        <br>発生時の生成処理を軽減しました。
+                    </p>
+                    <p><strong>02. 風による自然な動きの表現</strong></p>
+                    <p>
+                        風の方向や強さに加え、sin・cos関数を利用した揺れを実装しました。
+                        <br>葉っぱと桜で移動速度や湯売れ方を変えることで、それぞれの特徴に
+                        <br>合った動きを表現しました。
+                    </p>
+                    <p><strong>03. 自動発生と描画処理</strong></p>
+                    <p>
+                        一定間隔でパーティクルを自動発生させ、ランダムな位置・大きさ・
+                        <br>寿命の長さを設定しました。また、寿命に応じて透明度を変化させ、
+                        <br>自然に消えていく表現を実装しました。
+                    </p>
+                </div>
+
+
+            </section>
+
+            <section>
+                <h1 class="main-title">ゲームの作品</h1>
+                <h2>GitHubはこちらから</h2>
+                <a href="https://github.com/k-koudai01/KOJINSEISAKU_2" class="btn" target="_blank" rel="noopener">GitHub</a>
+
+            </section>-->
+
+            <div style="margin-top: 40px;">
+                <a href="index.html" class="btn back-btn">← ポートフォリオTOPへ戻る</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
